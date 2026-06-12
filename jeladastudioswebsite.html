@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelada Studios | Exploring the Depths</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#0a0a0a',
+                        darkgray: '#121212',
+                        rawgray: '#a3a3a3',
+                        purewhite: '#ffffff',
+                        tensionred: '#ff003c'
+                    },
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Reset & Noise Overlay */
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Static Noise Texture */
+        .noise-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Glitch & Flicker Animation */
+        .glitch-text {
+            position: relative;
+            animation: flicker 4s infinite alternate;
+        }
+        
+        @keyframes flicker {
+            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: 1; }
+            20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.4; }
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Selection */
+        ::selection {
+            background-color: #ffffff;
+            color: #0a0a0a;
+        }
+
+        /* Brutalist Image Placeholder */
+        .brutal-placeholder {
+            background: repeating-linear-gradient(
+                45deg,
+                #121212,
+                #121212 10px,
+                #0a0a0a 10px,
+                #0a0a0a 20px
+            );
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-purewhite selection:text-black">
+
+    <div class="noise-overlay"></div>
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-6 px-6 md:px-12 flex justify-between items-center bg-black/80 backdrop-blur-sm border-b border-transparent">
+        <a href="#" class="flex items-center gap-3 transition-colors group">
+            <img src="image_0.png" alt="Jelada Studios Logo" class="h-10 md:h-12 w-auto group-hover:filter group-hover:brightness-110" style="filter: invert(1) brightness(2);">
+            <span class="sr-only">Jelada Studios</span>
+        </a>
+        <div class="hidden md:flex gap-8 font-mono text-sm uppercase tracking-widest">
+            <a href="#careers" class="hover:text-purewhite text-rawgray transition-colors">Careers</a>
+            <a href="#games" class="hover:text-purewhite text-rawgray transition-colors">Games</a>
+            <a href="#team" class="hover:text-purewhite text-rawgray transition-colors">Team</a>
+            <a href="#contact" class="hover:text-purewhite text-rawgray transition-colors">Contact</a>
+        </div>
+        <button class="md:hidden text-purewhite text-2xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <header class="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20">
+        <div class="max-w-7xl mx-auto w-full reveal flex flex-col md:flex-row md:items-end justify-between gap-8 relative z-10">
+            <div class="max-w-4xl">
+                <h1 class="text-6xl md:text-8xl lg:text-[7rem] leading-[0.85] font-bold uppercase tracking-tighter mb-8 glitch-text">
+                    There is nothing <br>
+                    <span class="text-purewhite border-b-8 border-tensionred pb-2 inline-block mb-4">permanent</span> <br>
+                    except change.
+                </h1>
+                <p class="text-xl md:text-2xl text-rawgray max-w-2xl font-light leading-snug border-l-4 border-rawgray pl-6">
+                    Exploring the depths of human psychology, tension, and melancholy through interactive experiences.
+                </p>
+            </div>
+            <div class="hidden lg:block opacity-10 hover:opacity-20 transition-opacity duration-500 mb-4 relative z-0">
+                <img src="image_0.png" alt="" class="w-48 h-48 w-auto h-auto" style="filter: invert(1) brightness(1.2);">
+            </div>
+        </div>
+    </header>
+
+    <section id="careers" class="py-32 px-6 md:px-12 border-t-2 border-zinc-900 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal">
+                <span class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2">// RECRUITMENT</span>
+                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter">We Are Hiring</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
+                <div class="border-2 border-zinc-800 p-8 bg-darkgray hover:border-purewhite transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-tensionred text-black font-mono text-xs uppercase px-4 py-1 font-bold tracking-widest">
+                        Open Position
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold uppercase tracking-tight mb-1">3D Designer</h3>
+                        <span class="font-mono text-xs text-rawgray uppercase block mb-6">[ Entry Level / UE5 ]</span>
+                        <p class="text-rawgray text-base leading-relaxed mb-8">
+                            We are looking for an entry-level 3D Designer capable of working efficiently within Unreal Engine 5 environment. You will collaborate closely with the art and dev teams to build haunting assets and atmospheric levels.
+                        </p>
+                    </div>
+                    <a href="mailto:contact@jeladastudios.com?subject=Application: 3D Designer" class="inline-block text-xs font-mono uppercase tracking-widest border-2 border-zinc-700 hover:border-purewhite hover:bg-purewhite hover:text-black py-3 px-6 transition-all duration-300 self-start">
+                        Apply Position _
+                    </a>
+                </div>
+
+                <div class="border-2 border-zinc-800 p-8 bg-darkgray hover:border-purewhite transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-tensionred text-black font-mono text-xs uppercase px-4 py-1 font-bold tracking-widest">
+                        Open Position
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold uppercase tracking-tight mb-1">Concept Artist</h3>
+                        <span class="font-mono text-xs text-rawgray uppercase block mb-6">[ Brutalist & Urban Environments ]</span>
+                        <p class="text-rawgray text-base leading-relaxed mb-8">
+                            Seeking a visionary Concept Artist focusing heavily on massive brutalist architecture, raw concrete structures, and melancholic, dystopian cityscapes to define our game's distinct visual identity.
+                        </p>
+                    </div>
+                    <a href="mailto:contact@jeladastudios.com?subject=Application: Concept Artist" class="inline-block text-xs font-mono uppercase tracking-widest border-2 border-zinc-700 hover:border-purewhite hover:bg-purewhite hover:text-black py-3 px-6 transition-all duration-300 self-start">
+                        Apply Position _
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="py-32 px-6 md:px-12 bg-darkgray border-t-2 border-zinc-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal">
+                <span class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2">// CURRENT PROJECT</span>
+                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter">Exposure</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center reveal">
+                <div class="lg:col-span-5 flex flex-col items-start">
+                    <p class="text-lg md:text-xl text-rawgray mb-10 leading-relaxed">
+                        A psychological thriller exploring the thin line between reality and delusion. Driven by insomnia and the haunting architecture of duality. Developed in Unreal Engine 5.
+                    </p>
+                    <a href="#" class="inline-block border-2 border-purewhite text-purewhite px-8 py-4 uppercase font-bold tracking-widest hover:bg-purewhite hover:text-black transition-all duration-300">
+                        Steam Wishlist <span class="font-mono text-xs ml-2 text-rawgray hover:text-black">_COMING SOON</span>
+                    </a>
+                </div>
+                
+                <div class="lg:col-span-7 w-full aspect-video border-2 border-zinc-800 brutal-placeholder flex items-center justify-center relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <i class="fa-solid fa-eye text-4xl text-zinc-700 z-0 group-hover:scale-150 transition-transform duration-700"></i>
+                    <div class="absolute bottom-4 right-4 font-mono text-xs text-zinc-600 z-20 uppercase">No Signal</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-32 px-6 md:px-12 bg-black border-t-2 border-zinc-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal">
+                <span class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2">// THE CORE</span>
+                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter">Architects of <br> Melancholy</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border-2 border-zinc-800 p-8 hover:border-purewhite transition-colors duration-300 flex flex-col justify-between min-h-[200px] reveal">
+                    <h3 class="text-2xl font-bold uppercase tracking-tight">Ozan Abi</h3>
+                    <div class="mt-8 font-mono text-sm text-rawgray uppercase leading-relaxed">
+                        <span class="block">Game Director</span>
+                        <span class="block">Level Designer</span>
+                        <span class="block">Game Writer</span>
+                    </div>
+                </div>
+
+                <div class="border-2 border-zinc-800 p-8 hover:border-purewhite transition-colors duration-300 flex flex-col justify-between min-h-[200px] reveal" style="transition-delay: 100ms;">
+                    <h3 class="text-2xl font-bold uppercase tracking-tight">Eymen Koçbıyık</h3>
+                    <div class="mt-8 font-mono text-sm text-rawgray uppercase leading-relaxed">
+                        <span class="block">SFX Artist</span>
+                        <span class="block">Narrative Designer</span>
+                    </div>
+                </div>
+
+                <div class="border-2 border-zinc-800 p-8 hover:border-purewhite transition-colors duration-300 flex flex-col justify-between min-h-[200px] reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-bold uppercase tracking-tight">Eymen Sevil</h3>
+                    <div class="mt-8 font-mono text-sm text-rawgray uppercase leading-relaxed">
+                        <span class="block">Developer</span>
+                    </div>
+                </div>
+
+                <div class="border-2 border-zinc-800 p-8 hover:border-purewhite transition-colors duration-300 flex flex-col justify-between min-h-[200px] reveal" style="transition-delay: 300ms;">
+                    <h3 class="text-2xl font-bold uppercase tracking-tight">Hüseyin Eray Erdin</h3>
+                    <div class="mt-8 font-mono text-sm text-rawgray uppercase leading-relaxed">
+                        <span class="block">3D Designer</span>
+                    </div>
+                </div>
+
+                <div class="border-2 border-zinc-800 p-8 hover:border-purewhite transition-colors duration-300 flex flex-col justify-between min-h-[200px] reveal" style="transition-delay: 400ms;">
+                    <h3 class="text-2xl font-bold uppercase tracking-tight">Efe Can Alıcıoğlu</h3>
+                    <div class="mt-8 font-mono text-sm text-rawgray uppercase leading-relaxed">
+                        <span class="block">Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-32 px-6 md:px-12 bg-darkgray border-t-2 border-zinc-900">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center reveal">
+            <span class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-8">// CONNECT</span>
+            
+            <a href="mailto:contact@jeladastudios.com" class="text-3xl md:text-5xl lg:text-7xl font-bold uppercase tracking-tighter hover:text-rawgray transition-colors mb-16 break-all">
+                contact@jeladastudios.com
+            </a>
+
+            <div class="flex gap-8 mb-24">
+                <a href="https://www.instagram.com/jeladastudios/" target="_blank" class="w-16 h-16 border-2 border-zinc-800 flex items-center justify-center text-2xl text-rawgray hover:text-black hover:bg-purewhite hover:border-purewhite transition-all duration-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/jeladastudios" target="_blank" class="w-16 h-16 border-2 border-zinc-800 flex items-center justify-center text-2xl text-rawgray hover:text-black hover:bg-purewhite hover:border-purewhite transition-all duration-300">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Jelada-Studios" target="_blank" class="w-16 h-16 border-2 border-zinc-800 flex items-center justify-center text-2xl text-rawgray hover:text-black hover:bg-purewhite hover:border-purewhite transition-all duration-300">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+            <div class="w-full border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center font-mono text-xs text-zinc-600 uppercase">
+                <p>&copy; 2026 Jelada Studios.</p>
+                <p class="mt-2 md:mt-0">Built for the sleepless.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scroll Effect (Brutalist Border)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('border-transparent', 'py-6');
+                navbar.classList.add('border-purewhite', 'py-4');
+            } else {
+                navbar.classList.add('border-transparent', 'py-6');
+                navbar.classList.remove('border-purewhite', 'py-4');
+            }
+        });
+
+        // Intersection Observer for Scroll Reveals
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+    </script>
+
+</body>
+</html>
