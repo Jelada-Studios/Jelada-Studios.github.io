@@ -184,10 +184,12 @@
                     </a>
                 </div>
                 
-                <div class="lg:col-span-7 w-full aspect-video border-2 border-zinc-800 brutal-placeholder flex items-center justify-center relative group overflow-hidden">
-                    <div class="absolute inset-0 bg-black/50 group-hover:bg-transparent transition-all duration-500 z-10"></div>
-                    <i class="fa-solid fa-eye text-4xl text-zinc-700 z-0 group-hover:scale-150 transition-transform duration-700"></i>
-                    <div class="absolute bottom-4 right-4 font-mono text-xs text-zinc-600 z-20 uppercase">No Signal</div>
+                <div class="lg:col-span-7 w-full aspect-video border-2 border-zinc-800 flex items-center justify-center relative group overflow-hidden bg-black">
+                    <!-- Added Project Image -->
+                    <img src="test1.jpeg" alt="The Sleep: Awakening Screenshot" class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 group-hover:scale-105">
+                    
+                    <!-- Overlay Effect on Hover -->
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-500 z-10"></div>
                 </div>
             </div>
         </div>
