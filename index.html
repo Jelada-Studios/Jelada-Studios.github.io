@@ -245,19 +245,28 @@
                         <source type="image/webp" srcset="assets/img/shot-800.webp 800w, assets/img/shot-1280.webp 1280w, assets/img/shot-1600.webp 1600w" sizes="100vw">
                         <img src="test2.jpg" alt="" width="1600" height="901" decoding="async" fetchpriority="high" class="hero-img">
                     </picture>
+                    <!-- Flashlight: a full-colour copy of the street, visible only through a soft circle that follows the cursor -->
+                    <div class="hero-lit" aria-hidden="true">
+                        <picture>
+                            <source type="image/avif" srcset="assets/img/shot-800.avif 800w, assets/img/shot-1280.avif 1280w, assets/img/shot-1600.avif 1600w" sizes="100vw">
+                            <source type="image/webp" srcset="assets/img/shot-800.webp 800w, assets/img/shot-1280.webp 1280w, assets/img/shot-1600.webp 1600w" sizes="100vw">
+                            <img src="test2.jpg" alt="" width="1600" height="901" decoding="async" fetchpriority="low">
+                        </picture>
+                    </div>
                     <div class="hero-tint"></div>
                 </div>
             </div>
         </div>
         <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-cover" aria-hidden="true"></div>
 
         <div class="hero-content max-w-7xl mx-auto w-full relative z-10">
             <div class="max-w-5xl">
                 <h1 class="text-6xl md:text-8xl lg:text-[7rem] leading-[0.85] font-bold uppercase tracking-tighter mb-8">
-                    <span class="hero-line"><span class="hero-line-in" style="--d:300ms"><span data-i18n="hero.l1">There is nothing</span></span></span>
-                    <span class="hero-line"><span class="hero-line-in" style="--d:400ms"><span class="hero-underline text-purewhite" data-i18n="hero.l2">permanent</span></span></span>
-                    <span class="hero-line"><span class="hero-line-in" style="--d:500ms"><span data-i18n="hero.l3">except change.</span></span></span>
+                    <span class="hero-line"><span class="hero-line-in" style="--d:300ms"><span data-i18n="hero.l1" data-chars>There is nothing</span></span></span>
+                    <span class="hero-line"><span class="hero-line-in" style="--d:400ms"><span class="hero-underline text-purewhite" data-i18n="hero.l2" data-chars>permanent</span></span></span>
+                    <span class="hero-line"><span class="hero-line-in" style="--d:500ms"><span data-i18n="hero.l3" data-chars>except change.</span></span></span>
                 </h1>
                 <p class="hero-fade text-xl md:text-2xl text-rawgray max-w-2xl font-light leading-snug border-l-4 border-rawgray pl-6" style="--d:800ms" data-i18n="hero.subtitle">
                     Exploring the depths of human psychology, tension, and melancholy through interactive experiences.
@@ -271,61 +280,73 @@
         <i class="sec-rule" aria-hidden="true"></i>
         <div class="max-w-7xl mx-auto relative z-10">
             <span data-reveal="up" class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2" data-i18n="about.tag">// WHO WE ARE</span>
-            <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-10"><span data-reveal="mask" style="--reveal-delay:60ms"><span data-i18n="about.title">Beyond the Code</span></span></h2>
-            <p data-reveal="up" data-split style="--reveal-delay:160ms" class="text-2xl md:text-4xl text-rawgray font-light leading-tight max-w-5xl border-l-8 border-tensionred pl-8 md:pl-12 py-2" data-i18n-html="about.body">
+            <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-10"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n="about.title" data-chars>Beyond the Code</span></span></h2>
+            <div class="about-wrap relative max-w-5xl">
+                <span class="about-bar" aria-hidden="true"></span>
+            <p data-reveal="up" data-split style="--reveal-delay:160ms" class="text-2xl md:text-4xl text-rawgray font-light leading-tight pl-8 md:pl-12 py-2" data-i18n-html="about.body">
                 <span class="text-purewhite font-bold">We are an independent game development studio</span> dedicated to merging human psychology, dystopian narratives, and melancholy through interactive experiences. We don't just build games; we craft haunting atmospheres that linger in the minds of players.
             </p>
+            </div>
         </div>
     </section>
 
     <!-- ============================ GAMES ============================ -->
-    <section id="games" class="relative py-32 md:py-40 bg-black border-t-2 border-line overflow-hidden">
+    <!-- On large screens the stage pins and the street plays as a scroll-driven sequence;
+         on phones, short windows and browsers without scroll timelines it is a plain stacked section. -->
+    <section id="games" class="games relative bg-black border-t-2 border-line">
         <i class="sec-rule" aria-hidden="true"></i>
-        <div class="wrap relative z-10 mb-12 md:mb-16">
-            <span data-reveal="up" class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2" data-i18n="games.tag">// CURRENT PROJECT</span>
-            <h2 lang="en" class="text-5xl md:text-7xl font-bold uppercase tracking-tighter"><span data-reveal="mask" style="--reveal-delay:60ms"><span>The Sleep:<br>Awakening</span></span></h2>
-        </div>
-
-        <!-- Same street as the hero, now awake. The frame opens to full width and the colour returns as it scrolls in. -->
-        <figure id="gameShot" class="game-frame">
-            <div class="game-frame-inner">
-                <picture>
-                    <source type="image/avif" srcset="assets/img/shot-800.avif 800w, assets/img/shot-1280.avif 1280w, assets/img/shot-1600.avif 1600w" sizes="100vw">
-                    <source type="image/webp" srcset="assets/img/shot-800.webp 800w, assets/img/shot-1280.webp 1280w, assets/img/shot-1600.webp 1600w" sizes="100vw">
-                    <img src="test2.jpg" alt="The Sleep: Awakening, in-game screenshot of a gloomy dystopian city at dusk." loading="lazy" decoding="async" width="1600" height="901" class="game-img">
-                </picture>
-                <div class="vignette"></div>
-            </div>
-            <figcaption class="wrap pt-4 font-mono text-xs uppercase tracking-widest text-faint">
-                <span data-i18n="games.badge1">In Development</span> <span aria-hidden="true">/</span> <span data-i18n="games.badge2">Pre-alpha footage</span>
-            </figcaption>
-        </figure>
-
-        <div class="wrap mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
-            <div class="lg:col-span-6">
-                <p data-reveal="up" class="text-lg md:text-xl text-rawgray leading-relaxed" data-i18n="games.body">
-                    The Sleep: Awakening is an action-thriller tracking a journey from a mundane corporate routine to a dangerous struggle for survival. Powered by Unreal Engine 5, we fuse fluid parkour mechanics and combat dynamics within a gloomy city environment. Don't you see the state of the people? Perhaps it is time to wake up.
-                </p>
-            </div>
-
-            <div class="lg:col-span-5 lg:col-start-8 flex flex-col items-start">
-                <ul class="flex flex-wrap gap-3 mb-10 font-mono text-xs uppercase tracking-widest text-rawgray">
-                    <li lang="en" data-reveal="up" style="--reveal-delay:0ms" class="chip" data-i18n="games.f1">Unreal Engine 5</li>
-                    <li data-reveal="up" style="--reveal-delay:70ms" class="chip" data-i18n="games.f2">Parkour Traversal</li>
-                    <li data-reveal="up" style="--reveal-delay:140ms" class="chip" data-i18n="games.f3">Visceral Combat</li>
-                    <li data-reveal="up" style="--reveal-delay:210ms" class="chip" data-i18n="games.f4">Psychological Narrative</li>
-                </ul>
-
-                <div data-reveal="up" class="border-l-4 border-tensionred pl-5 mb-10 max-w-md">
-                    <span class="block font-mono text-xs uppercase tracking-widest text-tensionred mb-3" data-i18n="games.demoLabel">Playable Demo - Coming Soon</span>
-                    <span class="block text-5xl md:text-6xl font-bold uppercase tracking-tighter leading-none mb-3" data-i18n="games.demoDate">Nov 2026</span>
-                    <span class="block text-rawgray text-sm md:text-base" data-i18n="games.demoText">A free 5-10 minute demo is planned for around November 2026.</span>
+        <div class="games-track">
+            <div class="games-stage py-32 md:py-40">
+                <div class="games-head wrap mb-12 md:mb-16">
+                    <span data-reveal="up" class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2" data-i18n="games.tag">// CURRENT PROJECT</span>
+                    <h2 lang="en" class="games-title text-5xl md:text-7xl font-bold uppercase tracking-tighter"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-chars>The Sleep:<br>Awakening</span></span></h2>
                 </div>
 
-                <!-- Swap the span for <a href="STEAM_URL"> when the store page is live -->
-                <span data-reveal="up" role="button" aria-disabled="true" class="cta-sweep inline-block border-2 border-line text-rawgray px-8 py-4 uppercase font-bold tracking-widest cursor-not-allowed select-none">
-                    <span data-i18n="games.cta">Steam Wishlist</span> <span class="font-mono text-xs ml-2" data-i18n="games.ctaNote">_COMING SOON</span>
-                </span>
+                <!-- Same street as the hero, now awake -->
+                <figure id="gameShot" class="game-frame">
+                    <div class="game-frame-inner">
+                        <div class="game-zoom">
+                            <picture>
+                                <source type="image/avif" srcset="assets/img/shot-800.avif 800w, assets/img/shot-1280.avif 1280w, assets/img/shot-1600.avif 1600w" sizes="100vw">
+                                <source type="image/webp" srcset="assets/img/shot-800.webp 800w, assets/img/shot-1280.webp 1280w, assets/img/shot-1600.webp 1600w" sizes="100vw">
+                                <img src="test2.jpg" alt="The Sleep: Awakening, in-game screenshot of a gloomy dystopian city at dusk." loading="lazy" decoding="async" width="1600" height="901" class="game-img">
+                            </picture>
+                        </div>
+                        <div class="vignette"></div>
+                        <div class="game-shade" aria-hidden="true"></div>
+                    </div>
+                    <figcaption class="wrap pt-4 font-mono text-xs uppercase tracking-widest text-faint">
+                        <span data-i18n="games.badge1">In Development</span> <span aria-hidden="true">/</span> <span data-i18n="games.badge2">Pre-alpha footage</span>
+                    </figcaption>
+                </figure>
+
+                <div class="games-body wrap mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+                    <div class="games-col-a lg:col-span-6">
+                        <p data-reveal="up" class="games-para text-lg md:text-xl text-rawgray leading-relaxed" data-i18n="games.body">
+                            The Sleep: Awakening is an action-thriller tracking a journey from a mundane corporate routine to a dangerous struggle for survival. Powered by Unreal Engine 5, we fuse fluid parkour mechanics and combat dynamics within a gloomy city environment. Don't you see the state of the people? Perhaps it is time to wake up.
+                        </p>
+                    </div>
+
+                    <div class="games-col-b lg:col-span-5 lg:col-start-8 flex flex-col items-start">
+                        <ul class="games-chips flex flex-wrap gap-3 mb-10 font-mono text-xs uppercase tracking-widest text-rawgray">
+                            <li lang="en" data-reveal="up" style="--reveal-delay:0ms" class="chip" data-i18n="games.f1">Unreal Engine 5</li>
+                            <li data-reveal="up" style="--reveal-delay:70ms" class="chip" data-i18n="games.f2">Parkour Traversal</li>
+                            <li data-reveal="up" style="--reveal-delay:140ms" class="chip" data-i18n="games.f3">Visceral Combat</li>
+                            <li data-reveal="up" style="--reveal-delay:210ms" class="chip" data-i18n="games.f4">Psychological Narrative</li>
+                        </ul>
+
+                        <div data-reveal="up" class="games-demo border-l-4 border-tensionred pl-5 mb-10 max-w-md">
+                            <span class="block font-mono text-xs uppercase tracking-widest text-tensionred mb-3" data-i18n="games.demoLabel">Playable Demo - Coming Soon</span>
+                            <span class="block text-5xl md:text-6xl font-bold uppercase tracking-tighter leading-none mb-3" data-i18n="games.demoDate">Nov 2026</span>
+                            <span class="block text-rawgray text-sm md:text-base" data-i18n="games.demoText">A free 5-10 minute demo is planned for around November 2026.</span>
+                        </div>
+
+                        <!-- Swap the span for <a href="STEAM_URL"> when the store page is live -->
+                        <span data-reveal="up" role="button" aria-disabled="true" class="games-cta cta-sweep inline-block border-2 border-line text-rawgray px-8 py-4 uppercase font-bold tracking-widest cursor-not-allowed select-none">
+                            <span data-i18n="games.cta">Steam Wishlist</span> <span class="font-mono text-xs ml-2" data-i18n="games.ctaNote">_COMING SOON</span>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -335,10 +356,10 @@
         <i class="sec-rule" aria-hidden="true"></i>
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="mb-12 md:mb-16">
-                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter"><span data-reveal="mask" style="--reveal-delay:60ms"><span data-i18n-html="other.title">Outside<br>The Sleep</span></span></h2>
+                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="other.title" data-chars>Outside<br>The Sleep</span></span></h2>
             </div>
 
-            <a href="/fts-geology/" data-reveal="up" style="--reveal-delay:140ms" class="fts-card group relative block border-2 border-line hover:border-purewhite transition-colors duration-300 overflow-hidden">
+            <a href="/fts-geology/" data-reveal="up" style="--reveal-delay:140ms" class="fts-card spot group relative block border-2 border-line">
                 <div class="fts-card-bg" aria-hidden="true">
                     <picture>
                         <source type="image/avif" srcset="assets/img/fault-640.avif 640w, assets/img/fault-1280.avif 1280w" sizes="(min-width: 1280px) 1280px, 100vw">
@@ -347,7 +368,7 @@
                     </picture>
                 </div>
                 <div class="relative z-10 grid grid-cols-1 md:grid-cols-12">
-                    <div class="md:col-span-4 lg:col-span-3 border-b-2 md:border-b-0 md:border-r-2 border-line group-hover:border-purewhite transition-colors duration-300 flex items-center justify-center p-10 md:p-8 bg-black">
+                    <div class="md:col-span-4 lg:col-span-3 border-b-2 md:border-b-0 md:border-r-2 border-line flex items-center justify-center p-10 md:p-8 bg-black">
                         <!-- The FT mark inlined so the T can slip: it is a fault, and the far block has dropped -->
                         <svg viewBox="0 0 132 120" class="ft-mark text-purewhite w-28 h-auto md:w-full md:max-w-[140px] opacity-90 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" focusable="false">
                             <path d="M10 14 H56 V32 H28 V48 H48 V66 H28 V98 H10 Z"/>
@@ -393,12 +414,12 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="mb-12 md:mb-16">
                 <span data-reveal="up" class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2" data-i18n="team.tag">// THE CORE</span>
-                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter"><span data-reveal="mask" style="--reveal-delay:60ms"><span data-i18n-html="team.title">Architects of<br>Melancholy</span></span></h2>
+                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="team.title" data-chars>Architects of<br>Melancholy</span></span></h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div data-reveal="up" class="team-card group relative overflow-hidden border-2 border-line p-8 hover:border-purewhite transition-colors duration-300 flex flex-col justify-between min-h-[260px]">
-                    <span class="team-initials" aria-hidden="true">OA</span>
+                <div data-reveal="up" class="team-card spot group relative border-2 border-line p-8 flex flex-col justify-between min-h-[260px]">
+                    <span class="team-clip" aria-hidden="true"><span class="team-initials">OA</span></span>
                     <h3 class="relative z-10 text-2xl font-bold uppercase tracking-tight group-hover:text-tensionred transition-colors">Ozan Abi</h3>
                     <div class="relative z-10 mt-8 font-mono text-sm text-rawgray uppercase leading-relaxed">
                         <span class="block" data-i18n="role.o1">Game Director</span>
@@ -407,8 +428,8 @@
                     </div>
                 </div>
 
-                <div data-reveal="up" style="--reveal-delay:120ms" class="team-card group relative overflow-hidden border-2 border-line p-8 hover:border-purewhite transition-colors duration-300 flex flex-col justify-between min-h-[260px]">
-                    <span class="team-initials" aria-hidden="true">EK</span>
+                <div data-reveal="up" style="--reveal-delay:120ms" class="team-card spot group relative border-2 border-line p-8 flex flex-col justify-between min-h-[260px]">
+                    <span class="team-clip" aria-hidden="true"><span class="team-initials">EK</span></span>
                     <h3 class="relative z-10 text-2xl font-bold uppercase tracking-tight group-hover:text-tensionred transition-colors">Eymen Koçbıyık</h3>
                     <div class="relative z-10 mt-8 font-mono text-sm text-rawgray uppercase leading-relaxed">
                         <span class="block" data-i18n="role.e1">SFX Artist</span>
@@ -427,9 +448,9 @@
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
             <span data-reveal="up" class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-8" data-i18n="contact.tag">// CONNECT</span>
 
-            <a href="mailto:contact@jeladastudios.com" data-roll data-reveal="up" style="--reveal-delay:80ms" class="roll text-3xl md:text-5xl lg:text-7xl font-bold uppercase tracking-tighter mb-16 break-all">contact@jeladastudios.com</a>
+            <a href="mailto:contact@jeladastudios.com" data-roll data-reveal="up" style="--reveal-delay:80ms" class="roll text-[clamp(1.1rem,5.6vw,1.875rem)] md:text-5xl lg:text-7xl font-bold uppercase tracking-tighter mb-16 break-all">contact@jeladastudios.com</a>
 
-            <div data-reveal="up" style="--reveal-delay:160ms" class="flex gap-8 mb-24">
+            <div data-reveal="up" style="--reveal-delay:160ms" class="flex gap-8 mb-16">
                 <a href="https://www.instagram.com/jeladastudios/" target="_blank" rel="noopener noreferrer" aria-label="Jelada Studios on Instagram" class="magnetic w-16 h-16 border-2 border-line flex items-center justify-center text-2xl text-rawgray hover:text-black hover:bg-purewhite hover:border-purewhite">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 </a>
@@ -441,9 +462,10 @@
                 </a>
             </div>
 
-            <div class="w-full border-t border-line pt-8 flex flex-col md:flex-row justify-between items-center font-mono text-xs text-faint uppercase">
+            <div class="foot-mark" aria-hidden="true"><span data-reveal="chars"><span data-chars>Jelada</span></span></div>
+
+            <div class="w-full border-t border-line pt-8 flex justify-center font-mono text-xs text-faint uppercase">
                 <p>&copy; <span id="year">2026</span> Jelada Studios. <span data-i18n="footer.copy">All rights reserved.</span></p>
-                <p class="mt-2 md:mt-0" data-i18n="footer.tag">Built for the sleepless.</p>
             </div>
         </div>
     </footer>
@@ -476,7 +498,7 @@
                 'role.o1': 'Game Director', 'role.o2': 'Lead Level Designer', 'role.o3': 'Game Writer',
                 'role.e1': 'SFX Artist', 'role.e2': 'Narrative Designer',
                 'contact.tag': '// CONNECT',
-                'footer.copy': 'All rights reserved.', 'footer.tag': 'Built for the sleepless.'
+                'footer.copy': 'All rights reserved.'
             },
             tr: {
                 'nav.about': 'Hakkımızda', 'nav.games': 'Oyunlar', 'nav.projects': 'Projeler', 'nav.team': 'Ekip', 'nav.contact': 'İletişim',
@@ -499,7 +521,7 @@
                 'role.o1': 'Oyun Yönetmeni', 'role.o2': 'Baş Bölüm Tasarımcısı', 'role.o3': 'Oyun Yazarı',
                 'role.e1': 'Ses Efekti Sanatçısı', 'role.e2': 'Anlatı Tasarımcısı',
                 'contact.tag': '// İLETİŞİM',
-                'footer.copy': 'Tüm hakları saklıdır.', 'footer.tag': 'Uykusuzlar için.'
+                'footer.copy': 'Tüm hakları saklıdır.'
             }
         };
     </script>
