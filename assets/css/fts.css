@@ -1,0 +1,262 @@
+/* FT's Geology page. Tokens, type, nav, reveals and the letter masks come from site.css; this file
+   holds what only this page has: the plate map, the boundary sections, the seismogram, the volcano
+   and hot-spring figures. Every diagram is drawn in its FINAL state and animated FROM a start state,
+   so with animation off (reduced motion, old browsers) you still see the finished picture. */
+
+/* ===== Hero ===== */
+.fts-hero-fig { position: relative; }
+.fts-hero-frame {
+    position: relative; overflow: hidden; aspect-ratio: 16 / 11; border: 2px solid rgb(var(--c-line));
+    background: repeating-linear-gradient(45deg, rgb(var(--c-surface)), rgb(var(--c-surface)) 10px, rgb(var(--c-bg)) 10px, rgb(var(--c-bg)) 20px);
+    clip-path: inset(46% 0 46% 0);
+    transition: clip-path 1.7s var(--ease-in-out) 0.15s;
+}
+body.is-loaded .fts-hero-frame, html:not(.js) .fts-hero-frame { clip-path: inset(0 0 0 0); }
+.fts-parallax { position: absolute; inset: -9% 0; will-change: transform; }
+.fts-hero-img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    transform: scale(1.18); filter: brightness(0.45);
+    transition: transform 3s var(--ease-out), filter 2.4s var(--ease-out);
+}
+body.is-loaded .fts-hero-img, html:not(.js) .fts-hero-img { transform: none; filter: none; }
+.fts-hero-cap { margin-top: 1rem; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(var(--c-faint)); }
+@keyframes ftsDrift { to { transform: translate3d(0, 10%, 0) scale(1.06); } }
+@supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .fts-parallax { animation: ftsDrift linear both; animation-timeline: scroll(root block); animation-range: 0 100vh; }
+    }
+}
+
+/* The mark is a fault. On arrival the crack opens and the T slips down into place. It carries the
+   transition name that lets it travel here from the project card on the home page. */
+.fts-hero-mark { view-transition-name: fts-mark; }
+.fts-hero-mark .ft-fault { transform-box: fill-box; transform-origin: 50% 0; transition: transform 0.7s var(--ease-out) 1s; }
+.fts-hero-mark .ft-t { transition: transform 1.1s var(--spring) 1.35s; }
+html.js .fts-hero-mark .ft-fault { transform: scaleY(0); }
+html.js .fts-hero-mark .ft-t { transform: translateY(-14px); }
+html.js body.is-loaded .fts-hero-mark .ft-fault, html.js body.is-loaded .fts-hero-mark .ft-t { transform: none; }
+
+/* ===== 01 The model: the plate map drifts as you scroll past it ===== */
+.plates-fig { position: relative; margin-top: 4rem; border: 2px solid rgb(var(--c-line)); overflow: hidden; }
+.plates { display: block; width: 100%; height: auto; }
+.plate { fill: rgb(var(--c-fg) / 0.11); stroke: rgb(var(--c-fg) / 0.22); stroke-width: 1; }
+.plates .arrow { fill: none; stroke: rgb(var(--c-fg) / 0.6); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.plate-edge { fill: none; stroke: rgb(var(--c-accent)); stroke-width: 2.5; stroke-linecap: round; }
+/* Final (drifted) positions; the animation starts from the plates joined edge to edge */
+.pl-a { transform: translate(-34px, 10px); }
+.pl-b { transform: translate(40px, 34px); }
+.pl-c { transform: translate(-10px, -30px); }
+.plate-label {
+    position: absolute; font-family: "JetBrains Mono", monospace; font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgb(var(--c-muted)); pointer-events: none;
+}
+@keyframes driftA { from { transform: translate(0, 0); } }
+@keyframes driftB { from { transform: translate(0, 0); } }
+@keyframes driftC { from { transform: translate(0, 0); } }
+@keyframes labelIn { from { opacity: 0; } }
+@supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .plates-fig { view-timeline: --plates block; }
+        .pl-a { animation: driftA linear both; animation-timeline: --plates; animation-range: cover 14% cover 64%; }
+        .pl-b { animation: driftB linear both; animation-timeline: --plates; animation-range: cover 14% cover 64%; }
+        .pl-c { animation: driftC linear both; animation-timeline: --plates; animation-range: cover 14% cover 64%; }
+        .plate-label { animation: labelIn linear both; animation-timeline: --plates; animation-range: cover 50% cover 66%; }
+    }
+}
+
+/* ===== 02 Boundaries: tabs, a description, and a cross-section that plays when selected ===== */
+.bound-grid { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1024px) {
+    .bound-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "tabs stage" "desc stage"; column-gap: 4rem; row-gap: 2rem; }
+}
+.bound-tabs { grid-area: tabs; display: flex; flex-direction: column; }
+.bound-panels { grid-area: desc; display: grid; align-content: start; }
+.bound-stage {
+    grid-area: stage; position: relative; align-self: start; aspect-ratio: 16 / 9;
+    border: 2px solid rgb(var(--c-line)); background: rgb(var(--c-surface));
+}
+@media (max-width: 1023px) { .bound-grid { grid-template-areas: "tabs" "stage" "desc"; } }
+
+.bound-tab {
+    position: relative; display: flex; align-items: center; gap: 1.25rem; width: 100%; text-align: left; padding: 1rem 0 1.1rem;
+    color: rgb(var(--c-faint)); transition: color 0.35s ease;
+}
+.bound-tab:hover { color: rgb(var(--c-muted)); }
+.bound-tab.is-active { color: rgb(var(--c-fg)); }
+.bound-sym { flex: none; width: 6.5rem; height: 1rem; color: inherit; }
+.bound-tab.is-active .bound-sym { color: rgb(var(--c-accent)); }
+.bound-name { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; text-transform: uppercase; letter-spacing: -0.025em; line-height: 1.1; }
+.bound-prog {
+    position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: rgb(var(--c-accent));
+    transform: scaleX(0); transform-origin: left center; pointer-events: none;
+}
+.bound-tab.is-active .bound-prog { transform: scaleX(1); }
+[data-auto] .bound-tab.is-active .bound-prog { transform: scaleX(0); animation: tabProg var(--tab-dur, 7s) linear forwards; }
+[data-auto].is-paused .bound-tab.is-active .bound-prog { animation-play-state: paused; }
+@keyframes tabProg { to { transform: scaleX(1); } }
+
+.bound-panel {
+    grid-area: 1 / 1; opacity: 0; visibility: hidden; transform: translateY(12px);
+    transition: opacity 0.45s ease, transform 0.7s var(--ease-out), visibility 0s linear 0.45s;
+}
+.bound-panel.is-active { opacity: 1; visibility: visible; transform: none; transition-delay: 0.18s, 0.18s, 0s; }
+html:not(.js) .bound-panel { grid-area: auto; opacity: 1; visibility: visible; transform: none; margin-bottom: 1.5rem; }
+
+.bound-fig { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; visibility: hidden; transition: opacity 0.5s ease, visibility 0s linear 0.5s; }
+.bound-fig.is-active { opacity: 1; visibility: visible; transition-delay: 0s; }
+.js .bound-grid:not(.is-visible) .bound-fig * { animation-play-state: paused; }
+html:not(.js) .bound-fig:first-child { opacity: 1; visibility: visible; }
+
+/* Shared drawing vocabulary for the four cross-sections */
+.bound-fig .rock { fill: rgb(var(--c-fg) / 0.1); stroke: rgb(var(--c-fg) / 0.55); stroke-width: 1.5; stroke-linejoin: round; }
+.bound-fig .strata { fill: none; stroke: rgb(var(--c-fg) / 0.2); stroke-width: 1.5; }
+.bound-fig .mantle { fill: rgb(var(--c-fg) / 0.035); }
+.bound-fig .acc { fill: none; stroke: rgb(var(--c-accent)); stroke-width: 3; stroke-linecap: round; }
+.bound-fig .acc-fill { fill: rgb(var(--c-accent)); }
+.bound-fig .arrow { fill: none; stroke: rgb(var(--c-fg) / 0.7); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.bound-fig .stream { fill: none; stroke: rgb(var(--c-fg) / 0.6); stroke-width: 2.5; stroke-linecap: round; }
+.bound-fig g, .bound-fig path, .bound-fig ellipse { transform-box: fill-box; }
+
+@keyframes draw { from { stroke-dashoffset: 1; } }
+@keyframes figFade { from { opacity: 0; } }
+@keyframes rise { from { transform: scaleY(0.04); } }
+
+/* 1 - Spreading rift: the blocks pull apart, the middle one drops, dykes of basalt rise below */
+.f1-l { transform: translateX(-26px); }
+.f1-r { transform: translateX(26px); }
+.f1-c { transform: translateY(34px); }
+.f1-dyke { stroke-dasharray: 1; stroke-dashoffset: 0; }
+@keyframes f1pull { from { transform: translateX(0); } }
+@keyframes f1drop { from { transform: translateY(0); } }
+.is-active .f1-l, .is-active .f1-r { animation: f1pull 1.6s var(--ease-out) 0.25s both; }
+.is-active .f1-c { animation: f1drop 1.4s var(--spring) 0.7s both; }
+.is-active .f1-dyke { animation: draw 1.1s var(--ease-out) 1.1s both; }
+.is-active .f1-dyke:nth-child(2) { animation-delay: 1.2s; } .is-active .f1-dyke:nth-child(3) { animation-delay: 1.3s; }
+.is-active .f1-dyke:nth-child(4) { animation-delay: 1.4s; } .is-active .f1-dyke:nth-child(5) { animation-delay: 1.5s; }
+.is-active .f1-arr, .is-active .f2-arr, .is-active .f3-arr, .is-active .f4-arr { animation: figFade 0.6s ease 0.1s both; }
+
+/* 2 - Subduction arc: the slab slides under the plate, chambers fill, a cone builds above them */
+@keyframes f2slab { from { transform: translate(-46px, -34px); } }
+@keyframes f2grow { from { transform: scale(0); } }
+.f2-chamber, .f2-cone { transform-origin: 50% 100%; }
+.f2-chamber { transform-origin: 50% 50%; }
+.f2-conduit { stroke-dasharray: 1; stroke-dashoffset: 0; }
+.is-active .f2-slab { animation: f2slab 1.8s var(--ease-out) 0.2s both; }
+.is-active .f2-chamber { animation: f2grow 1s var(--spring) 1.1s both; }
+.is-active .f2-chamber + .f2-chamber { animation-delay: 1.35s; }
+.is-active .f2-conduit { animation: draw 0.9s var(--ease-out) 1.6s both; }
+.is-active .f2-cone { animation: rise 1.1s var(--spring) 1.9s both; }
+.is-active .f2-lava { animation: figFade 0.6s ease 2.7s both; }
+
+/* 3 - Continental collision: neither plate sinks, so the crust piles up and a root grows beneath */
+@keyframes f3l { from { transform: translateX(-70px); } }
+@keyframes f3r { from { transform: translateX(70px); } }
+.f3-core { transform-origin: 50% 50%; }
+.is-active .f3-l { animation: f3l 1.5s var(--ease-out) 0.2s both; }
+.is-active .f3-r { animation: f3r 1.5s var(--ease-out) 0.2s both; }
+.is-active .f3-core { animation: rise 1.7s var(--spring) 0.9s both; }
+.is-active .f3-fold { animation: figFade 0.8s ease 2s both; }
+
+/* 4 - Transform fault: the blocks slide past each other and drag the stream with them */
+.f4-l { transform: translateY(-42px); }
+.f4-r { transform: translateY(42px); }
+.f4-link { stroke-dasharray: 1; stroke-dashoffset: 0; }
+@keyframes f4up { from { transform: translateY(0); } }
+@keyframes f4down { from { transform: translateY(0); } }
+.is-active .f4-l { animation: f4up 1.7s var(--ease-in-out) 0.3s both; }
+.is-active .f4-r { animation: f4down 1.7s var(--ease-in-out) 0.3s both; }
+.is-active .f4-link { animation: draw 0.7s var(--ease-out) 1.9s both; }
+
+/* ===== 03 Earthquakes ===== */
+.seismo { display: block; width: 100%; height: auto; overflow: visible; margin-bottom: 4rem; }
+.seismo-base { stroke: rgb(var(--c-line)); stroke-width: 1; }
+.seismo-line { fill: none; stroke: rgb(var(--c-accent)); stroke-width: 1.5; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
+@keyframes seismoDraw { from { stroke-dashoffset: 1; } }
+@supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .seismo-line { animation: seismoDraw linear both; animation-timeline: view(block); animation-range: entry 15% cover 45%; }
+    }
+}
+
+.diagram { color: rgb(var(--c-fg)); }
+.accent-fill { fill: rgb(var(--c-accent)); }
+.diagram-label { font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; fill: rgb(var(--c-muted)); }
+
+.gr-bar { transform-box: fill-box; transform-origin: 50% 100%; transition: transform 1s var(--ease-out) calc(0.2s + var(--bi, 0) * 0.14s); }
+html.js .quake-fig:not(.in) .gr-bar { transform: scaleY(0); }
+/* The M9 lands last and the chart answers with a short tremor */
+@keyframes tremor { 0%, 100% { translate: 0 0; } 15% { translate: -3px 1px; } 30% { translate: 3px -1px; } 45% { translate: -2px 0; } 60% { translate: 2px 1px; } 80% { translate: -1px 0; } }
+@media (prefers-reduced-motion: no-preference) { .quake-fig.in { animation: tremor 0.7s linear 1.15s both; } }
+
+/* ===== 04 The surface ===== */
+.vol { transform-box: fill-box; transform-origin: 50% 100%; transition: transform 1.2s var(--spring) calc(var(--vi, 0) * 0.2s); }
+html.js .volcano-fig:not(.in) .vol { transform: scaleY(0.02); }
+.vol-label { transition: opacity 0.8s ease 1.2s; }
+html.js .volcano-fig:not(.in) .vol-label { opacity: 0; }
+
+.band-sinter { background: #cfc8b8; color: #16130f; }
+.band-orange { background: #ce6a24; color: #170b04; }
+.band-yellow { background: #cfa424; color: #191300; }
+.band-brown  { background: #6f4a2b; color: #f2e6da; }
+.band-green  { background: #3f6c43; color: #eaf2ea; }
+/* The bands open outward from the pool, hottest first, the order the mats sit in */
+.thermal-ramp > div { transition: clip-path 0.9s var(--ease-in-out) calc(var(--ti, 0) * 0.17s + 0.1s); }
+html.js .thermal-ramp:not(.in) > div { clip-path: inset(0 100% 0 0); }
+html.js .thermal-ramp[data-reveal]:not(.in) { opacity: 1; }
+/* Five columns are too narrow on a phone, so the bands stack; they still run outward from the pool */
+@media (max-width: 640px) {
+    .thermal-ramp { grid-template-columns: 1fr !important; }
+    .thermal-ramp > div { min-height: 0 !important; flex-direction: row !important; align-items: baseline !important; justify-content: space-between !important; padding: 0.7rem 0.95rem !important; }
+    html.js .thermal-ramp:not(.in) > div { clip-path: inset(0 0 100% 0); }
+}
+
+.photo {
+    position: relative; overflow: hidden; aspect-ratio: 16 / 10; border: 2px solid rgb(var(--c-line)); margin: 0;
+    background: repeating-linear-gradient(45deg, rgb(var(--c-surface)), rgb(var(--c-surface)) 10px, rgb(var(--c-bg)) 10px, rgb(var(--c-bg)) 20px);
+}
+.photo-inner { position: absolute; inset: -7% 0; }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo-cap { margin-top: 0.9rem; font-family: "JetBrains Mono", monospace; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(var(--c-faint)); line-height: 1.6; }
+@keyframes photoOpen { from { clip-path: inset(9% 9% 9% 9%); } to { clip-path: inset(0 0 0 0); } }
+@keyframes photoDrift { from { transform: translate3d(0, -5%, 0) scale(1.06); } to { transform: translate3d(0, 5%, 0) scale(1.06); } }
+@supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .photo { animation: photoOpen linear both; animation-timeline: view(block); animation-range: entry 0% entry 85%; }
+        .photo-inner { animation: photoDrift linear both; animation-timeline: view(block); animation-range: cover 0% cover 100%; }
+    }
+}
+
+/* ===== 05 Get it: the commands copy on click ===== */
+.cmd-group { border: 2px solid rgb(var(--c-line)); padding: 0.4rem; }
+.cmd {
+    display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 0.2rem 1.5rem; align-items: baseline;
+    padding: 0.85rem 0.9rem; position: relative; transition: background-color 0.3s ease;
+}
+@media (max-width: 639px) { .cmd { grid-template-columns: minmax(0, 1fr); } }
+.cmd:hover, .cmd:focus-within { background-color: rgb(var(--c-line) / 0.4); }
+.cmd-copy {
+    display: inline-flex; align-items: center; gap: 0.7rem; text-align: left; justify-self: start;
+    font-family: "JetBrains Mono", monospace; font-size: 0.875rem; color: rgb(var(--c-accent));
+}
+.cmd-copy .ic { width: 1rem; height: 1rem; flex: none; opacity: 0; transform: translateX(-5px); transition: opacity 0.25s ease, transform 0.5s var(--ease-out); }
+.cmd:hover .ic, .cmd-copy:focus-visible .ic { opacity: 0.85; transform: none; }
+.cmd .ic-check { display: none; }
+.cmd.is-copied .ic-copy { display: none; }
+.cmd.is-copied .ic-check { display: block; opacity: 1; transform: none; }
+.cmd-state { font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(var(--c-faint)); }
+.cmd-state .s-copied { display: none; color: rgb(var(--c-accent)); }
+.cmd.is-copied .s-copy { display: none; }
+.cmd.is-copied .s-copied { display: inline; }
+.cmd-state { opacity: 0; transition: opacity 0.25s ease; }
+.cmd:hover .cmd-state, .cmd-copy:focus-visible .cmd-state, .cmd.is-copied .cmd-state { opacity: 1; }
+@media (hover: none) { .cmd-copy .ic, .cmd-state { opacity: 0.75; transform: none; } }
+
+/* ===== Reduced motion: finished pictures, no movement ===== */
+@media (prefers-reduced-motion: reduce) {
+    .fts-hero-frame { clip-path: none !important; transition: none !important; }
+    .fts-hero-img { transform: none !important; filter: none !important; transition: none !important; }
+    .fts-parallax, .pl-a, .pl-b, .pl-c, .plate-label, .seismo-line, .photo, .photo-inner { animation: none !important; }
+    .quake-fig.in { animation: none !important; }
+    .fts-hero-mark .ft-fault, .fts-hero-mark .ft-t, .gr-bar, .vol, .vol-label, .thermal-ramp > div { transform: none !important; opacity: 1 !important; clip-path: none !important; transition: none !important; }
+    .bound-fig *, .bound-panel, .bound-fig { animation: none !important; }
+}
