@@ -259,7 +259,7 @@
         try { sessionStorage.setItem('jelada:pl', '1'); } catch (e) {}
         // The preloader leaves when the headline font and the hero photograph are really ready
         // (never later than 2.8s), and never before the mark has had time to land.
-        const heroImg = $('.hero-img');
+        const heroImg = $('.hero-img, [data-hero-decode]');
         const ready = Promise.race([
             Promise.all([
                 document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve(),
@@ -341,9 +341,13 @@
     /* ================= Scrollspy ================= */
     // The hero is sticky, so it never leaves the viewport: track every section in the band and
     // highlight the last one (in page order) that is in it. No section in the band means no highlight.
+    const spyOff = body.getAttribute('data-spy') === 'off';
+    const preset = $('.nav-link.is-active');
+    if (preset) { activeLink = preset; placeIndicator(true); }
     const spyOrder = ['top', 'about', 'games', 'other', 'team', 'contact'];
     const inBand = new Set();
     const spy = new IntersectionObserver((entries) => {
+        if (spyOff) return;
         entries.forEach((entry) => { if (entry.isIntersecting) inBand.add(entry.target.id); else inBand.delete(entry.target.id); });
         const current = spyOrder.filter((id) => inBand.has(id)).pop();
         activeLink = null;
@@ -436,6 +440,19 @@
             });
         });
     }
+
+    /* ================= Page transition: the FT mark travels from the card to the mod page ================= */
+    window.addEventListener('pageswap', (e) => {
+        if (!e.viewTransition || !e.activation || !e.activation.entry) return;
+        try {
+            const mark = $('.fts-card .ft-mark');
+            if (mark && new URL(e.activation.entry.url).pathname.indexOf('/fts-geology') === 0) mark.style.viewTransitionName = 'fts-mark';
+        } catch (err) {}
+    });
+    window.addEventListener('pageshow', (e) => {
+        const mark = $('.fts-card .ft-mark');
+        if (mark && e.persisted) mark.style.viewTransitionName = '';
+    });
 
     /* ================= Rolling text (contact address) ================= */
     $$('[data-roll]').forEach((el) => {

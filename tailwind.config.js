@@ -1,6 +1,6 @@
 /** Same theme the Play CDN used: colours are CSS variables so light/dark swap without a rebuild. */
 module.exports = {
-  content: ['./index.html', './assets/js/site.js'],
+  content: ['./index.html', './fts-geology/index.html', './assets/js/site.js', './assets/js/fts.js'],
   theme: {
     extend: {
       colors: {
