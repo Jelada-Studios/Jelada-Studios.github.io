@@ -36,10 +36,10 @@
         })();
     </script>
 
-    <title>FT&rsquo;s Geology - The Most Realistic Geology Mod for Minecraft | Jelada Studios</title>
-    <meta name="description" content="The most realistic geology mod for Minecraft. FT&rsquo;s Geology puts a working plate-tectonic model under your world: fault lines you can map, earthquakes that build the landforms they should, volcanoes shaped by their setting, and geysers that run on real heat and pressure. Minecraft 1.20.1, Forge.">
+    <title>FT's Geology 0.11: plate tectonics for Minecraft | Jelada Studios</title>
+    <meta name="description" content="A Minecraft mod that builds the world from plate tectonics: real mountains, earthquakes from faults, volcanoes, rivers and regional rain. Forge 1.20.1.">
     <meta name="author" content="Jelada Studios">
-    <meta name="keywords" content="FT's Geology, Minecraft mod, plate tectonics, earthquake mod, volcano mod, geyser mod, worldgen, Forge 1.20.1, Jelada Studios">
+    <meta name="keywords" content="FT's Geology, Minecraft mod, plate tectonics, earthquake mod, volcano mod, geyser mod, terrain mod, world type, Forge 1.20.1, Jelada Studios">
     <meta name="theme-color" content="#0a0a0a" id="themeColorMeta">
     <link rel="canonical" href="https://jeladastudios.com/fts-geology/">
 
@@ -49,45 +49,107 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jelada Studios">
-    <meta property="og:title" content="FT&rsquo;s Geology - The Most Realistic Geology Mod for Minecraft">
-    <meta property="og:description" content="A working plate-tectonic model under your world. Fault lines, earthquakes that build landforms, volcanoes shaped by their setting.">
+    <meta property="og:title" content="FT&rsquo;s Geology 0.11: plate tectonics for Minecraft">
+    <meta property="og:description" content="A Minecraft mod that builds the world from plate tectonics: real mountains, earthquakes from faults, volcanoes, rivers and regional rain. Forge 1.20.1.">
     <meta property="og:url" content="https://jeladastudios.com/fts-geology/">
     <meta property="og:image" content="https://jeladastudios.com/assets/img/og-fts.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="A plate boundary seen from the air in FT's Geology, the fault line running across the terrain.">
+    <meta property="og:image:alt" content="A river valley between snowy peaks">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FT&rsquo;s Geology - The Most Realistic Geology Mod for Minecraft">
-    <meta name="twitter:description" content="A working plate-tectonic model under your world. From Jelada Studios.">
+    <meta name="twitter:title" content="FT&rsquo;s Geology 0.11: plate tectonics for Minecraft">
+    <meta name="twitter:description" content="A Minecraft mod that builds the world from plate tectonics: real mountains, earthquakes from faults, volcanoes, rivers and regional rain. Forge 1.20.1.">
     <meta name="twitter:image" content="https://jeladastudios.com/assets/img/og-fts.jpg">
 
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/space-grotesk-latin-700-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/space-grotesk-latin-500-normal.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/jetbrains-mono-latin-400-normal.woff2" crossorigin>
-    <link rel="preload" as="image" type="image/avif" href="/assets/img/fault-1280.avif"
-          imagesrcset="/assets/img/fault-640.avif 640w, /assets/img/fault-1280.avif 1280w" imagesizes="(min-width: 1024px) 50vw, 100vw" fetchpriority="high">
+    <link rel="preload" as="image" type="image/avif" href="/assets/img/mod/mountain-valley-1280.avif"
+          imagesrcset="/assets/img/mod/mountain-valley-640.avif 640w, /assets/img/mod/mountain-valley-1280.avif 1280w" imagesizes="(min-width: 1024px) 50vw, 100vw" fetchpriority="high">
 
     <link rel="stylesheet" href="/assets/css/tailwind.css">
     <link rel="stylesheet" href="/assets/css/site.css">
     <link rel="stylesheet" href="/assets/css/fts.css">
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FT's Geology",
+  "softwareVersion": "0.11.0",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Minecraft Java Edition 1.20.1 (Forge 47+)",
+  "description": "A Minecraft mod that builds the world from plate tectonics: real mountains, earthquakes from faults, volcanoes, rivers and regional rain. Forge 1.20.1.",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "downloadUrl": "https://www.curseforge.com/minecraft/mc-mods/fts-geology",
+  "url": "https://jeladastudios.com/fts-geology/",
+  "image": "https://jeladastudios.com/assets/img/og-fts.jpg",
+  "sameAs": [
+    "https://github.com/Jelada-Studios/fts-geology",
+    "https://github.com/Jelada-Studios/fts-geology/wiki",
+    "https://www.curseforge.com/minecraft/mc-mods/fts-geology"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Jelada Studios",
+    "url": "https://jeladastudios.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jelada Studios",
+    "url": "https://jeladastudios.com/"
+  },
+  "dateModified": "2026-10-10"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "FT's Geology",
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Windows, macOS, Linux",
-        "url": "https://jeladastudios.com/fts-geology/",
-        "image": "https://jeladastudios.com/assets/img/og-fts.jpg",
-        "softwareVersion": "0.9.0-alpha",
-        "license": "https://opensource.org/licenses/MIT",
-        "description": "A Minecraft Forge mod that puts a working plate-tectonic model under the world: tectonic plates with real motion, fault lines that produce the landforms they should, earthquakes, volcanoes shaped by their setting, geysers with thermodynamics, and hot springs with microbial colour banding.",
-        "author": { "@type": "Organization", "name": "Jelada Studios", "url": "https://jeladastudios.com/" },
-        "publisher": { "@type": "Organization", "name": "Jelada Studios" },
-        "isAccessibleForFree": true
+      "@type": "Question",
+      "name": "Do I need a new world?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for the terrain. A world made with an older version keeps its own terrain, in new chunks too. Earthquakes, volcanoes, weather, gases and instruments work in it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with Terralith? With Biomes O' Plenty or Tectonic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. With Terralith, the mod's world stays the default and Terralith's biomes grow on its terrain. With Biomes O' Plenty or Tectonic (and TerraBlender or BYG), the vanilla world stays the default. Pick FT's Geology under World Type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it need any other mod?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It has no required mods. It also works with TerraFirmaCraft, Distant Horizons, Create, Electrodynamics, Serene Seasons, Tough As Nails, Flowing Fluids and Oculus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a NeoForge version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A NeoForge 1.21.1 version is coming soon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do earthquakes break my builds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Damage depends on a build's material and foundation, and foundations, base isolation and bracing help. The config option quakesBreakBuilds turns it off."
+      }
     }
+  ]
+}
     </script>
 
     <noscript>
@@ -197,31 +259,37 @@
                 </p>
 
                 <p class="hero-fade text-base md:text-lg text-rawgray max-w-xl leading-relaxed border-l-4 border-line pl-6 mb-8" style="--d:1000ms" data-i18n="g.hero.sub">
-                    Plates that drift, faults that produce the landforms they should, earthquakes you can watch happen, and volcanoes shaped by the ground they stand on.
+                    Plates drift and build the world: real mountains, earthquakes from faults, volcanoes, rivers and regional rain.
                 </p>
 
                 <div class="hero-fade flex flex-wrap gap-4 items-center" style="--d:1150ms">
                     <a href="https://www.curseforge.com/minecraft/mc-mods/fts-geology" data-cf class="cta-sweep inline-block border-2 border-purewhite bg-purewhite text-black px-8 py-4 uppercase font-bold tracking-widest hover:bg-transparent hover:text-purewhite transition-colors duration-300">
                         <span data-i18n="g.cta.download">Download</span>
                     </a>
-                    <a href="#boundaries" class="inline-block border-2 border-line text-rawgray px-8 py-4 uppercase font-bold tracking-widest hover:border-purewhite hover:text-purewhite transition-colors duration-300">
-                        <span data-i18n="g.cta.what">What it builds</span>
+                    <a href="https://github.com/Jelada-Studios/fts-geology/wiki" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-line text-rawgray px-8 py-4 uppercase font-bold tracking-widest hover:border-purewhite hover:text-purewhite transition-colors duration-300">
+                        <span data-i18n="g.cta.wiki">Wiki</span>
                     </a>
                 </div>
+                <p class="hero-fade mt-6 font-mono text-xs uppercase tracking-widest text-faint" style="--d:1250ms" data-i18n="g.hero.small">NeoForge 1.21.1 coming soon</p>
             </div>
 
             <figure class="fts-hero-fig lg:col-span-6 w-full m-0">
                 <div class="fts-hero-frame">
                     <div class="fts-parallax">
                         <picture>
-                            <source type="image/avif" srcset="/assets/img/fault-640.avif 640w, /assets/img/fault-1280.avif 1280w" sizes="(min-width: 1280px) 640px, (min-width: 1024px) 50vw, 100vw">
-                            <source type="image/webp" srcset="/assets/img/fault-640.webp 640w, /assets/img/fault-1280.webp 1280w" sizes="(min-width: 1280px) 640px, (min-width: 1024px) 50vw, 100vw">
-                            <img src="/fault1.jpg" alt="A plate boundary seen from the air, the fault line running across the terrain." width="1600" height="999" decoding="async" fetchpriority="high" data-hero-decode class="fts-hero-img">
+                            <source type="image/avif" srcset="/assets/img/mod/mountain-valley-640.avif 640w, /assets/img/mod/mountain-valley-1280.avif 1280w" sizes="(min-width: 1280px) 640px, (min-width: 1024px) 50vw, 100vw">
+                            <source type="image/webp" srcset="/assets/img/mod/mountain-valley-640.webp 640w, /assets/img/mod/mountain-valley-1280.webp 1280w" sizes="(min-width: 1280px) 640px, (min-width: 1024px) 50vw, 100vw">
+                            <img src="/assets/img/mod/mountain-valley.jpg" alt="A river valley between snowy peaks" data-i18n-alt="g.alt.valley" width="1280" height="800" decoding="async" fetchpriority="high" data-hero-decode class="fts-hero-img">
                         </picture>
                     </div>
                     <div class="vignette"></div>
+                    <!-- Click-to-load: no YouTube code or cookies until you press play. Without JavaScript it is a plain link. -->
+                    <a href="https://www.youtube.com/watch?v=loqMm-64flE" target="_blank" rel="noopener noreferrer" class="trailer-play" data-trailer="loqMm-64flE">
+                        <span class="trailer-btn" aria-hidden="true"><svg viewBox="0 0 24 24" class="w-7 h-7"><polygon points="8 5 20 12 8 19" fill="currentColor"/></svg></span>
+                        <span class="trailer-label" data-i18n="g.trailer">Watch the trailer</span>
+                    </a>
                 </div>
-                <figcaption class="fts-hero-cap">Alpha 0.9.0 / Forge 1.20.1</figcaption>
+                <figcaption class="fts-hero-cap">0.11.0 &middot; Forge 1.20.1</figcaption>
             </figure>
         </div>
     </header>
@@ -267,8 +335,56 @@
         </div>
     </section>
 
+    <!-- ============================ A WORLD OF ITS OWN ============================ -->
+    <section id="world" class="relative py-32 md:py-40 px-6 md:px-12 bg-black border-t-2 border-line overflow-clip">
+        <i class="sec-rule" aria-hidden="true"></i>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-12 md:mb-16"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="g.w.title" data-chars>A World<br>Of Its Own</span></span></h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
+                    <div data-reveal="up"><h3 class="fact-h" data-i18n="g.w1.h">A tall world</h3><p class="text-rawgray leading-relaxed" data-i18n="g.w1.p">The new default world type, &ldquo;FT&rsquo;s Geology (Tall)&rdquo;, is 960 blocks tall.</p></div>
+                    <div data-reveal="up" style="--reveal-delay:80ms"><h3 class="fact-h" data-i18n="g.w2.h">Real mountains</h3><p class="text-rawgray leading-relaxed" data-i18n="g.w2.p">Mountain belts are built from real elevation data.</p></div>
+                    <div data-reveal="up" style="--reveal-delay:160ms"><h3 class="fact-h" data-i18n="g.w3.h">Rock and ore</h3><p class="text-rawgray leading-relaxed" data-i18n="g.w3.p">Twelve rocks, laid out by plate setting.</p></div>
+                    <div data-reveal="up" style="--reveal-delay:240ms"><h3 class="fact-h" data-i18n="g.w4.h">Rivers</h3><p class="text-rawgray leading-relaxed" data-i18n="g.w4.p">The rivers are the mod&rsquo;s own.</p></div>
+                </div>
+
+                <div class="lg:col-span-6 grid gap-8">
+                    <figure data-reveal="up" style="--reveal-delay:0ms" class="m-0">
+                        <div class="photo ">
+                            <div class="photo-inner">
+                            <picture>
+                                <source type="image/avif" srcset="/assets/img/mod/everest-640.avif 640w, /assets/img/mod/everest-1280.avif 1280w" sizes="(min-width: 1024px) 560px, 100vw">
+                                <source type="image/webp" srcset="/assets/img/mod/everest-640.webp 640w, /assets/img/mod/everest-1280.webp 1280w" sizes="(min-width: 1024px) 560px, 100vw">
+                                <img src="/assets/img/mod/everest.jpg" alt="Everest seen from a river far below" data-i18n-alt="g.alt.everest" width="1280" height="800" loading="lazy" decoding="async">
+                            </picture>
+                            </div>
+                            <div class="vignette"></div>
+                        </div>
+                    </figure>
+                    <figure data-reveal="up" style="--reveal-delay:110ms" class="m-0">
+                        <div class="photo ">
+                            <div class="photo-inner">
+                            <picture>
+                                <source type="image/avif" srcset="/assets/img/mod/rift-640.avif 640w, /assets/img/mod/rift-1280.avif 1280w" sizes="(min-width: 1024px) 560px, 100vw">
+                                <source type="image/webp" srcset="/assets/img/mod/rift-640.webp 640w, /assets/img/mod/rift-1280.webp 1280w" sizes="(min-width: 1024px) 560px, 100vw">
+                                <img src="/assets/img/mod/rift.jpg" alt="A rift valley at sunset" data-i18n-alt="g.alt.rift" width="1280" height="800" loading="lazy" decoding="async">
+                            </picture>
+                            </div>
+                            <div class="vignette"></div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <p data-reveal="up" class="mt-12 md:mt-16 max-w-3xl text-lg text-rawgray leading-relaxed border-l-4 border-tensionred pl-6" data-i18n-html="g.w.note">
+                <span class="text-purewhite font-bold">The new terrain needs a new world.</span> A world made with an older version keeps its own terrain, in new chunks too. Earthquakes, volcanoes, weather, gases and instruments work in it.
+            </p>
+        </div>
+    </section>
+
     <!-- ============================ BOUNDARIES ============================ -->
-    <section id="boundaries" class="relative py-32 md:py-40 px-6 md:px-12 bg-black border-t-2 border-line overflow-clip">
+    <section id="boundaries" class="relative py-32 md:py-40 px-6 md:px-12 bg-darkgray border-t-2 border-line overflow-clip">
         <i class="sec-rule" aria-hidden="true"></i>
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="mb-12 md:mb-16 max-w-3xl">
@@ -378,7 +494,7 @@
     </section>
 
     <!-- ============================ EARTHQUAKES ============================ -->
-    <section id="quakes" class="relative py-32 md:py-40 px-6 md:px-12 bg-darkgray border-t-2 border-line overflow-clip">
+    <section id="quakes" class="relative py-32 md:py-40 px-6 md:px-12 bg-black border-t-2 border-line overflow-clip">
         <i class="sec-rule" aria-hidden="true"></i>
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- A trace that sits quiet, builds, throws one large event and settles. Drawn as the section scrolls in. -->
@@ -387,12 +503,15 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 <div class="lg:col-span-6">
                     <span data-reveal="up" class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2" data-i18n="g.s3.tag">// EARTHQUAKES</span>
-                    <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-8"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="g.s3.title" data-chars>Two Minutes<br>Of Ground</span></span></h2>
+                    <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-8"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="g.s3.title" data-chars>Faults<br>That Break</span></span></h2>
                     <p data-reveal="up" style="--reveal-delay:140ms" class="text-lg text-rawgray leading-relaxed mb-6" data-i18n="g.s3.p1">
-                        A rupture follows the real curve of the fault. Its length comes from the standard surface-rupture scaling law, its magnitude from the Gutenberg-Richter distribution. The whole boundary moves at once, slowly, over a couple of minutes. Plates do not unzip from a point; they pull apart everywhere along the line together.
+                        Earthquakes come from the faults. Each stretch of fault builds up strain and breaks in its own time.
                     </p>
-                    <p data-reveal="up" style="--reveal-delay:220ms" class="text-lg text-rawgray leading-relaxed" data-i18n="g.s3.p2">
-                        Afterwards the ground settles. Spikes fall, crests shed talus at their feet, and the forest reseats itself: a tree whose ground dropped a little comes down with it, roots and all. Where the slope actually failed, the scarp is left bare.
+                    <p data-reveal="up" style="--reveal-delay:200ms" class="text-lg text-rawgray leading-relaxed mb-6" data-i18n="g.s3.p2">
+                        You get P and S waves, aftershocks, liquefaction on wet sand, landslides and rockfall.
+                    </p>
+                    <p data-reveal="up" style="--reveal-delay:260ms" class="text-lg text-rawgray leading-relaxed" data-i18n-html="g.s3.p3">
+                        Damage depends on what a build is made of and what it stands on.
                     </p>
                 </div>
 
@@ -420,17 +539,35 @@
                     </figcaption>
                 </figure>
             </div>
+
+            <div class="mt-16">
+                <figure data-reveal="up" style="--reveal-delay:0ms" class="m-0">
+                        <div class="photo photo-wide">
+                            <div class="photo-inner">
+                            <picture>
+                                <source type="image/avif" srcset="/assets/img/mod/village-after-640.avif 640w, /assets/img/mod/village-after-1280.avif 1280w" sizes="(min-width: 1280px) 1280px, 100vw">
+                                <source type="image/webp" srcset="/assets/img/mod/village-after-640.webp 640w, /assets/img/mod/village-after-1280.webp 1280w" sizes="(min-width: 1280px) 1280px, 100vw">
+                                <img src="/assets/img/mod/village-after.jpg" alt="A village after a strong earthquake" data-i18n-alt="g.alt.village" width="1280" height="800" loading="lazy" decoding="async">
+                            </picture>
+                            </div>
+                            <div class="vignette"></div>
+                        </div>
+                    </figure>
+            </div>
         </div>
     </section>
 
     <!-- ============================ THE SURFACE ============================ -->
-    <section id="surface" class="relative py-32 md:py-40 px-6 md:px-12 bg-black border-t-2 border-line overflow-clip">
+    <section id="surface" class="relative py-32 md:py-40 px-6 md:px-12 bg-darkgray border-t-2 border-line overflow-clip">
         <i class="sec-rule" aria-hidden="true"></i>
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="mb-12 md:mb-16 max-w-3xl">
                 <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-6"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="g.s4.title" data-chars>Mountains<br>With Reasons</span></span></h2>
-                <p data-reveal="up" style="--reveal-delay:140ms" class="text-lg text-rawgray leading-relaxed" data-i18n="g.s4.body">
+                <p data-reveal="up" style="--reveal-delay:140ms" class="text-lg text-rawgray leading-relaxed mb-5" data-i18n="g.s4.body">
                     In the real world you do not get to choose the shape of a volcano. Thick, sticky magma above a subduction zone piles into a steep layered cone. Runny magma from a hotspot spreads into a vast gentle shield, or blows its roof off and leaves a caldera. You can tell where you are standing by the mountain.
+                </p>
+                <p data-reveal="up" style="--reveal-delay:200ms" class="text-lg text-rawgray leading-relaxed" data-i18n="g.s4.v">
+                    There are four types (stratovolcano, shield, caldera and fissure), three sizes and three states: active, dormant and extinct.
                 </p>
             </div>
 
@@ -453,6 +590,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div class="lg:col-span-5">
+                    <p class="text-lg text-rawgray leading-relaxed mb-8" data-i18n="g.s4.hs">Geothermal basins have hot springs in four stages, mud pots, fumaroles and geysers that erupt on a cycle.</p>
                     <h3 class="text-3xl font-bold uppercase tracking-tight mb-5" data-i18n="g.s4.h2">The colours are alive</h3>
                     <p class="text-rawgray leading-relaxed mb-4" data-i18n="g.s4.p2">
                         Each band around a hot spring is a community of microorganisms that can only survive inside its own temperature range. The ring you are standing on tells you how hot the water was when it got there. It is a thermometer you can see.
@@ -490,33 +628,96 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-                <figure data-reveal="up" class="m-0">
-                    <div class="photo">
-                        <div class="photo-inner">
+                    <figure data-reveal="up" style="--reveal-delay:0ms" class="m-0">
+                        <div class="photo ">
+                            <div class="photo-inner">
                             <picture>
-                                <source type="image/avif" srcset="/assets/img/springs-640.avif 640w, /assets/img/springs-1280.avif 1280w" sizes="(min-width: 768px) 50vw, 100vw">
-                                <source type="image/webp" srcset="/assets/img/springs-640.webp 640w, /assets/img/springs-1280.webp 1280w" sizes="(min-width: 768px) 50vw, 100vw">
-                                <img src="/springs1.jpeg" alt="" width="1600" height="999" loading="lazy" decoding="async">
+                                <source type="image/avif" srcset="/assets/img/mod/strato-eruption-640.avif 640w, /assets/img/mod/strato-eruption-1280.avif 1280w" sizes="(min-width: 768px) 50vw, 100vw">
+                                <source type="image/webp" srcset="/assets/img/mod/strato-eruption-640.webp 640w, /assets/img/mod/strato-eruption-1280.webp 1280w" sizes="(min-width: 768px) 50vw, 100vw">
+                                <img src="/assets/img/mod/strato-eruption.jpg" alt="A stratovolcano erupting" data-i18n-alt="g.alt.strato" width="1280" height="800" loading="lazy" decoding="async">
                             </picture>
+                            </div>
+                            <div class="vignette"></div>
                         </div>
-                        <div class="vignette"></div>
-                    </div>
-                    <figcaption class="photo-cap" data-i18n="g.cap1">A hot spring ringed by microbial colour bands, from above.</figcaption>
-                </figure>
-                <figure data-reveal="up" style="--reveal-delay:110ms" class="m-0">
-                    <div class="photo">
-                        <div class="photo-inner">
+                    </figure>
+                    <figure data-reveal="up" style="--reveal-delay:110ms" class="m-0">
+                        <div class="photo ">
+                            <div class="photo-inner">
                             <picture>
-                                <source type="image/avif" srcset="/assets/img/volcano-640.avif 640w, /assets/img/volcano-1280.avif 1280w" sizes="(min-width: 768px) 50vw, 100vw">
-                                <source type="image/webp" srcset="/assets/img/volcano-640.webp 640w, /assets/img/volcano-1280.webp 1280w" sizes="(min-width: 768px) 50vw, 100vw">
-                                <img src="/volcano1.jpg" alt="" width="1600" height="999" loading="lazy" decoding="async">
+                                <source type="image/avif" srcset="/assets/img/mod/hot-spring-640.avif 640w, /assets/img/mod/hot-spring-1280.avif 1280w" sizes="(min-width: 768px) 50vw, 100vw">
+                                <source type="image/webp" srcset="/assets/img/mod/hot-spring-640.webp 640w, /assets/img/mod/hot-spring-1280.webp 1280w" sizes="(min-width: 768px) 50vw, 100vw">
+                                <img src="/assets/img/mod/hot-spring.jpg" alt="A hot spring with microbial mats" data-i18n-alt="g.alt.spring" width="1280" height="800" loading="lazy" decoding="async">
                             </picture>
+                            </div>
+                            <div class="vignette"></div>
                         </div>
-                        <div class="vignette"></div>
-                    </div>
-                    <figcaption class="photo-cap" data-i18n="g.cap2">A stratovolcano with lava in its summit crater.</figcaption>
-                </figure>
+                    </figure>
             </div>
+        </div>
+    </section>
+
+    <!-- ============================ WATER AND WEATHER ============================ -->
+    <section id="water" class="relative py-24 md:py-32 px-6 md:px-12 bg-black border-t-2 border-line overflow-clip">
+        <i class="sec-rule" aria-hidden="true"></i>
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <h2 class="lg:col-span-5 text-5xl md:text-7xl font-bold uppercase tracking-tighter"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="g.ww.title" data-chars>Water<br>And Weather</span></span></h2>
+            <ul class="lg:col-span-7 m-0 p-0 list-none">
+                    <li data-reveal="up" style="--reveal-delay:0ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line" data-i18n="g.ww.1">.</li>
+                    <li data-reveal="up" style="--reveal-delay:70ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line" data-i18n="g.ww.2">.</li>
+                    <li data-reveal="up" style="--reveal-delay:140ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line" data-i18n="g.ww.3">.</li>
+                    <li data-reveal="up" style="--reveal-delay:210ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line" data-i18n="g.ww.4">.</li>
+                    <li data-reveal="up" style="--reveal-delay:280ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line border-b-2" data-i18n="g.ww.5">.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================ GASES AND POWER ============================ -->
+    <section id="gases" class="relative py-24 md:py-32 px-6 md:px-12 bg-darkgray border-t-2 border-line overflow-clip">
+        <i class="sec-rule" aria-hidden="true"></i>
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div class="lg:col-span-7">
+                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-10 md:mb-12"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="g.gp.title" data-chars>Gases<br>And Power</span></span></h2>
+                <ul class="m-0 p-0 list-none">
+                    <li data-reveal="up" style="--reveal-delay:0ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line" data-i18n="g.gp.1">.</li>
+                    <li data-reveal="up" style="--reveal-delay:70ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line" data-i18n="g.gp.2">.</li>
+                    <li data-reveal="up" style="--reveal-delay:140ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line" data-i18n="g.gp.3">.</li>
+                    <li data-reveal="up" style="--reveal-delay:210ms" class="text-lg text-rawgray leading-relaxed py-5 border-t-2 border-line border-b-2" data-i18n="g.gp.4">.</li>
+                </ul>
+            </div>
+            <div class="lg:col-span-5">
+                <figure data-reveal="up" style="--reveal-delay:0ms" class="m-0">
+                        <div class="photo photo-tall">
+                            <div class="photo-inner">
+                            <picture>
+                                <source type="image/avif" srcset="/assets/img/mod/standing-flame-640.avif 640w, /assets/img/mod/standing-flame-1280.avif 1280w" sizes="(min-width: 1024px) 480px, 100vw">
+                                <source type="image/webp" srcset="/assets/img/mod/standing-flame-640.webp 640w, /assets/img/mod/standing-flame-1280.webp 1280w" sizes="(min-width: 1024px) 480px, 100vw">
+                                <img src="/assets/img/mod/standing-flame.jpg" alt="A standing gas flame at night" data-i18n-alt="g.alt.flame" width="1280" height="800" loading="lazy" decoding="async">
+                            </picture>
+                            </div>
+                            <div class="vignette"></div>
+                        </div>
+                    </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ INSTRUMENTS ============================ -->
+    <section id="instruments" class="relative py-24 md:py-32 px-6 md:px-12 bg-black border-t-2 border-line overflow-clip">
+        <i class="sec-rule" aria-hidden="true"></i>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-10 md:mb-12"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n="g.in.title" data-chars>Instruments</span></span></h2>
+            <p data-reveal="up" class="text-lg text-rawgray leading-relaxed mb-8 max-w-3xl" data-i18n="g.in.lead">Players read the world with instruments, not commands.</p>
+            <ul class="flex flex-wrap gap-3 font-mono text-xs uppercase tracking-widest text-rawgray mb-8">
+                <li data-reveal="up" style="--reveal-delay:0ms" class="chip" data-i18n="g.i1">.</li>
+                <li data-reveal="up" style="--reveal-delay:50ms" class="chip" data-i18n="g.i2">.</li>
+                <li data-reveal="up" style="--reveal-delay:100ms" class="chip" data-i18n="g.i3">.</li>
+                <li data-reveal="up" style="--reveal-delay:150ms" class="chip" data-i18n="g.i4">.</li>
+                <li data-reveal="up" style="--reveal-delay:200ms" class="chip" data-i18n="g.i5">.</li>
+                <li data-reveal="up" style="--reveal-delay:250ms" class="chip" data-i18n="g.i6">.</li>
+                <li data-reveal="up" style="--reveal-delay:300ms" class="chip" data-i18n="g.i7">.</li>
+                <li data-reveal="up" style="--reveal-delay:350ms" class="chip" data-i18n="g.i8">.</li>
+            </ul>
+            <p data-reveal="up" class="text-lg text-rawgray leading-relaxed max-w-3xl" data-i18n="g.in.guide">A 52-page in-game Field Guide and 18 advancements.</p>
         </div>
     </section>
 
@@ -526,86 +727,148 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="mb-12 md:mb-16 max-w-3xl">
                 <span data-reveal="up" class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-2" data-i18n="g.s5.tag">// GET IT</span>
-                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="g.s5.title" data-chars>Alpha<br>0.9.0</span></span></h2>
+                <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-6"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n-html="g.s5.title" data-chars>Version<br>0.11.0</span></span></h2>
+                <p data-reveal="up" class="font-mono text-xs uppercase tracking-widest text-faint" data-i18n="g.s5.upd">Last updated for 0.11.0, October 2026.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
                 <div class="lg:col-span-5 flex flex-col gap-8">
-                    <div data-reveal="up" class="flex flex-col gap-5">
-                        <h3 class="text-2xl font-bold uppercase tracking-tight" data-i18n="g.s5.compat">It reads your world instead of replacing it</h3>
-                        <p class="text-rawgray leading-relaxed" data-i18n="g.s5.c1">
-                            No worldgen is overridden, no biome source is taken over, no noise settings are touched. It stacks on top of Terralith and Tectonic rather than fighting them, and if a terrain mod has already painted a Yellowstone, the model settles on it.
-                        </p>
-                        <p class="text-rawgray leading-relaxed" data-i18n="g.s5.c2">
-                            Player-placed blocks are never broken. Not by generation, not by an eruption, not by an earthquake. Safe to add to a world you have already built in.
-                        </p>
-                    </div>
+                    <p data-reveal="up" class="text-lg text-rawgray leading-relaxed" data-i18n="g.s5.req">
+                        FT&rsquo;s Geology 0.11.0 for Minecraft 1.20.1, Forge 47 or newer, Java 17. No required mods. A NeoForge 1.21.1 version is coming soon.
+                    </p>
 
-                    <ul data-reveal="up" style="--reveal-delay:120ms" class="flex flex-wrap gap-3 font-mono text-xs uppercase tracking-widest text-rawgray">
+                    <ul data-reveal="up" style="--reveal-delay:80ms" class="flex flex-wrap gap-3 font-mono text-xs uppercase tracking-widest text-rawgray">
                         <li class="chip">Minecraft 1.20.1</li>
                         <li class="chip">Forge 47+</li>
                         <li class="chip">Java 17</li>
-                        <li class="chip">MIT</li>
-                        <li class="chip" data-i18n="g.tag.nodeps">No hard dependencies</li>
+                        <li class="chip">GPL-3.0</li>
+                        <li class="chip" data-i18n="g.tag.nodeps">No required mods</li>
                     </ul>
 
-                    <div data-reveal="up" style="--reveal-delay:200ms" class="flex flex-wrap gap-4 items-center">
+                    <p data-reveal="up" style="--reveal-delay:120ms" class="text-sm text-rawgray leading-relaxed" data-i18n="g.s5.lic">License: GNU GPL-3.0 from 0.11. Versions up to 0.10 were MIT.</p>
+
+                    <div data-reveal="up" style="--reveal-delay:160ms" class="flex flex-wrap gap-4 items-center">
                         <a href="https://www.curseforge.com/minecraft/mc-mods/fts-geology" data-cf class="cta-sweep inline-block border-2 border-purewhite bg-purewhite text-black px-8 py-4 uppercase font-bold tracking-widest hover:bg-transparent hover:text-purewhite transition-colors duration-300">
                             <span data-i18n="g.cta.download">Download</span>
                         </a>
-                        <a href="https://github.com/Jelada-Studios" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-line text-rawgray px-8 py-4 uppercase font-bold tracking-widest hover:border-purewhite hover:text-purewhite transition-colors duration-300">
+                        <a href="https://github.com/Jelada-Studios/fts-geology/wiki" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-line text-rawgray px-8 py-4 uppercase font-bold tracking-widest hover:border-purewhite hover:text-purewhite transition-colors duration-300">
+                            <span data-i18n="g.cta.wiki">Wiki</span>
+                        </a>
+                        <a href="https://github.com/Jelada-Studios/fts-geology" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-line text-rawgray px-8 py-4 uppercase font-bold tracking-widest hover:border-purewhite hover:text-purewhite transition-colors duration-300">
                             <span data-i18n="g.cta.source">Source</span>
                         </a>
+                    </div>
+
+                    <div data-reveal="up" class="flex flex-col gap-4">
+                        <h3 class="text-2xl font-bold uppercase tracking-tight" data-i18n="g.s5.compat">Compatibility</h3>
+                        <p class="text-rawgray leading-relaxed" data-i18n="g.s5.c1">Terralith: the mod&rsquo;s world stays the default and Terralith&rsquo;s biomes grow on its terrain.</p>
+                        <p class="text-rawgray leading-relaxed" data-i18n="g.s5.c2">Tectonic, TerraBlender, Biomes O&rsquo; Plenty and BYG: the vanilla world stays the default. Pick FT&rsquo;s Geology under World Type.</p>
+                        <p class="text-rawgray leading-relaxed" data-i18n="g.s5.c3">It also works with TerraFirmaCraft, Distant Horizons, Create, Electrodynamics, Serene Seasons, Tough As Nails, Flowing Fluids and Oculus.</p>
+                        <p class="text-rawgray leading-relaxed" data-i18n="g.s5.addon">Addon: &ldquo;FT&rsquo;s Geology: Feel the Nature&rdquo;, a separate mod. Among other things it plays recorded rain and wind.</p>
+                    </div>
+
+                    <div data-reveal="up" class="flex flex-col gap-4">
+                        <h3 class="text-2xl font-bold uppercase tracking-tight" data-i18n="g.s5.off.h">Off by default</h3>
+                        <p class="text-rawgray leading-relaxed" data-i18n-html="g.s5.off1">.</p>
+                        <p class="text-rawgray leading-relaxed" data-i18n-html="g.s5.off2">.</p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-7 flex flex-col gap-8">
-                    <div data-reveal="up" style="--reveal-delay:80ms">
-                        <h3 class="font-mono text-xs uppercase tracking-widest text-faint mb-4" data-i18n="g.cmd.read">Read the world</h3>
+                    <p data-reveal="up" class="text-sm text-rawgray leading-relaxed" data-i18n-html="g.cmd.ops">.</p>
+                    <div data-reveal="up" style="--reveal-delay:60ms">
+                        <h3 class="font-mono text-xs uppercase tracking-widest text-faint mb-4" data-i18n="g.cmd.read">.</h3>
                         <dl class="cmd-group m-0">
-                            <div class="cmd">
-                                <dt><button type="button" class="cmd-copy" data-copy="/geology map"><span>/geology map</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
-                                <dd class="text-sm text-rawgray" data-i18n="g.cmd.map">A filled map painted with the fault network</dd>
-                            </div>
-                            <div class="cmd">
+                            <div class="cmd cmd-solo">
                                 <dt><button type="button" class="cmd-copy" data-copy="/geology plate"><span>/geology plate</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
-                                <dd class="text-sm text-rawgray" data-i18n="g.cmd.plate">Plate, crust, drift, boundary and stress for your column</dd>
                             </div>
-                            <div class="cmd">
+                            <div class="cmd cmd-solo">
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology suitability"><span>/geology suitability</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
+                            </div>
+                            <div class="cmd cmd-solo">
                                 <dt><button type="button" class="cmd-copy" data-copy="/geology column"><span>/geology column</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
-                                <dd class="text-sm text-rawgray" data-i18n="g.cmd.column">The vertical section under you, bedrock to surface</dd>
                             </div>
-                            <div class="cmd">
-                                <dt><button type="button" class="cmd-copy" data-copy="/geology find"><span>/geology find</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
-                                <dd class="text-sm text-rawgray" data-i18n="g.cmd.find">Locate the nearest boundary of a given kind, or a hotspot</dd>
+                            <div class="cmd cmd-solo">
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology water"><span>/geology water</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
+                            </div>
+                            <div class="cmd cmd-solo">
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology map"><span>/geology map</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
+                            </div>
+                            <div class="cmd cmd-solo">
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology storms"><span>/geology storms</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
+                            </div>
+                            <div class="cmd cmd-solo">
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology gas info"><span>/geology gas info</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
                             </div>
                         </dl>
                     </div>
-
-                    <div data-reveal="up" style="--reveal-delay:160ms">
-                        <h3 class="font-mono text-xs uppercase tracking-widest text-faint mb-4" data-i18n="g.cmd.make">Make it happen</h3>
+                    <div data-reveal="up" style="--reveal-delay:120ms">
+                        <h3 class="font-mono text-xs uppercase tracking-widest text-faint mb-4" data-i18n="g.cmd.find">.</h3>
                         <dl class="cmd-group m-0">
                             <div class="cmd">
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology find"><span>/geology find</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
+                                <dd><code class="font-mono text-xs text-rawgray break-words">&lt;rift|<wbr>collision|<wbr>subduction|<wbr>transform|<wbr>hotspot|<wbr>everest|<wbr>k2|<wbr>matterhorn|<wbr>oil|<wbr>...&gt; [tp]</code></dd>
+                            </div>
+                            <div class="cmd">
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology field"><span>/geology field</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
+                                <dd><code class="font-mono text-xs text-rawgray break-words">[strato|<wbr>shield|<wbr>fissure|<wbr>caldera|<wbr>...] [tp]</code></dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div data-reveal="up" style="--reveal-delay:180ms">
+                        <h3 class="font-mono text-xs uppercase tracking-widest text-faint mb-4" data-i18n="g.cmd.make">.</h3>
+                        <dl class="cmd-group m-0">
+                            <div class="cmd cmd-solo">
                                 <dt><button type="button" class="cmd-copy" data-copy="/geology quake"><span>/geology quake</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
-                                <dd class="text-sm text-rawgray" data-i18n="g.cmd.quake">Trigger an earthquake, or force a style anywhere to compare them</dd>
                             </div>
                             <div class="cmd">
                                 <dt><button type="button" class="cmd-copy" data-copy="/geology place"><span>/geology place</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
-                                <dd class="text-sm text-rawgray" data-i18n="g.cmd.place">Build a geyser, a hot spring, or any of the four volcano types</dd>
+                                <dd><code class="font-mono text-xs text-rawgray break-words">&lt;geyser|<wbr>hotspring|<wbr>strato|<wbr>shield|<wbr>fissure|<wbr>caldera&gt;</code></dd>
                             </div>
                             <div class="cmd">
-                                <dt><button type="button" class="cmd-copy" data-copy="/geology deepgen"><span>/geology deepgen</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
-                                <dd class="text-sm text-rawgray" data-i18n="g.cmd.deepgen">Regenerate the deep boundary geology around you</dd>
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology fissure"><span>/geology fissure</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
+                                <dd><code class="font-mono text-xs text-rawgray break-words">start|here</code></dd>
+                            </div>
+                            <div class="cmd cmd-solo">
+                                <dt><button type="button" class="cmd-copy" data-copy="/geology storms spawn"><span>/geology storms spawn</span><svg class="ic ic-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ic ic-check" aria-hidden="true"><use href="#i-check"/></svg><span class="cmd-state" aria-live="polite"><span class="s-copy" data-i18n="g.copy">Copy</span><span class="s-copied" data-i18n="g.copied">Copied</span></span></button></dt>
                             </div>
                         </dl>
                     </div>
 
-                    <p data-reveal="up" style="--reveal-delay:240ms" class="text-sm text-faint leading-relaxed border-l-4 border-tensionred pl-5" data-i18n="g.s5.alpha">
-                        This is an early release. Balance numbers will keep moving. Bug reports with a screenshot and the relevant lines from latest.log are enormously useful: the mod logs what it does, on purpose.
-                    </p>
+                    <p data-reveal="up" style="--reveal-delay:240ms" class="text-sm text-faint leading-relaxed border-l-4 border-tensionred pl-5" data-i18n-html="g.s5.bugs">.</p>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FAQ ============================ -->
+    <section id="faq" class="relative py-24 md:py-32 px-6 md:px-12 bg-black border-t-2 border-line overflow-clip">
+        <i class="sec-rule" aria-hidden="true"></i>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-10 md:mb-12"><span data-reveal="chars" style="--reveal-delay:60ms"><span data-i18n="g.faq.title" data-chars>Questions</span></span></h2>
+            <div data-reveal="up" class="faq-list max-w-3xl">
+                <details class="faq">
+                    <summary><span data-i18n="g.q1">.</span><span class="faq-ic" aria-hidden="true"></span></summary>
+                    <p class="faq-a text-rawgray leading-relaxed" data-i18n-html="g.a1">.</p>
+                </details>
+                <details class="faq">
+                    <summary><span data-i18n="g.q2">.</span><span class="faq-ic" aria-hidden="true"></span></summary>
+                    <p class="faq-a text-rawgray leading-relaxed" data-i18n-html="g.a2">.</p>
+                </details>
+                <details class="faq">
+                    <summary><span data-i18n="g.q3">.</span><span class="faq-ic" aria-hidden="true"></span></summary>
+                    <p class="faq-a text-rawgray leading-relaxed" data-i18n-html="g.a3">.</p>
+                </details>
+                <details class="faq">
+                    <summary><span data-i18n="g.q4">.</span><span class="faq-ic" aria-hidden="true"></span></summary>
+                    <p class="faq-a text-rawgray leading-relaxed" data-i18n-html="g.a4">.</p>
+                </details>
+                <details class="faq">
+                    <summary><span data-i18n="g.q5">.</span><span class="faq-ic" aria-hidden="true"></span></summary>
+                    <p class="faq-a text-rawgray leading-relaxed" data-i18n-html="g.a5">.</p>
+                </details>
             </div>
         </div>
     </section>
@@ -613,7 +876,7 @@
     </main>
 
     <!-- ============================ CONTACT ============================ -->
-    <footer id="contact" class="relative py-32 md:py-40 px-6 md:px-12 bg-black border-t-2 border-line overflow-clip">
+    <footer id="contact" class="relative py-32 md:py-40 px-6 md:px-12 bg-darkgray border-t-2 border-line overflow-clip">
         <i class="sec-rule" aria-hidden="true"></i>
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
             <span data-reveal="up" class="font-mono text-tensionred text-sm tracking-widest uppercase block mb-8" data-i18n="contact.tag">// CONNECT</span>
@@ -654,13 +917,29 @@
                 'nav.contact': 'Contact',
                 'g.back': 'Jelada Studios / Projects',
                 'g.hero.claim': 'The most <span class="hero-underline">realistic</span> geology mod for <span lang="en">Minecraft</span>',
-                'g.hero.sub': 'Plates that drift, faults that produce the landforms they should, earthquakes you can watch happen, and volcanoes shaped by the ground they stand on.',
+                'g.hero.sub': 'Plates drift and build the world: real mountains, earthquakes from faults, volcanoes, rivers and regional rain.',
+                'g.hero.small': 'NeoForge 1.21.1 coming soon',
                 'g.cta.download': 'Download',
-                'g.cta.what': 'What it builds',
+                'g.cta.wiki': 'Wiki',
                 'g.cta.source': 'Source',
+                'g.trailer': 'Watch the trailer',
                 'g.s1.tag': '// THE MODEL',
                 'g.s1.title': 'One Map,<br>Everything Else',
-                'g.s1.body': '<span class="text-purewhite font-bold">Your world is divided into plates that drift.</span> Where two of them meet, what happens depends on how they are moving relative to each other, exactly as it does on Earth. Nothing in this mod is decoration. Every volcano, every hot spring, every earthquake is downstream of that one fact.',
+                'g.s1.body': '<span class="text-purewhite font-bold">Your world is divided into plates that drift.</span> Where two of them meet, what happens depends on how they are moving relative to each other, exactly as it does on Earth. Their edges become mountain belts, volcanic arcs, rifts and ocean ridges. Nothing in this mod is decoration. Every volcano, every hot spring, every earthquake is downstream of that one fact.',
+                'g.map.rift': 'Spreading',
+                'g.map.slide': 'Sliding',
+                'g.map.collide': 'Colliding',
+                'g.map.alt': 'Three tectonic plates: one pair pulls apart, one pair slides past each other, one pair collides.',
+                'g.w.title': 'A World<br>Of Its Own',
+                'g.w1.h': 'A tall world',
+                'g.w1.p': 'The new default world type, “FT’s Geology (Tall)”, is 960 blocks tall (y -64 to 896) and wider to match: 10 m to a block both ways. A normal-height version, “FT’s Geology”, is under World Type.',
+                'g.w2.h': 'Real mountains',
+                'g.w2.p': 'Mountain belts are built from real elevation data (SRTM) of the Alps, the Caucasus, the Himalaya, the Karakoram and the Appalachians. The tall world has one Everest, one K2 and one Matterhorn. Forest, treeline, alpine meadow, scree and snow follow the climate.',
+                'g.w3.h': 'Rock and ore',
+                'g.w3.p': 'Twelve rocks, laid out by plate setting: travertine, rhyolite, gabbro, peridotite, serpentinite, schist, gneiss, slate, marble, quartzite, shale and chert. Ore deposits sit where the geology puts them, and there are oil and gas fields.',
+                'g.w4.h': 'Rivers',
+                'g.w4.p': 'The rivers are the mod’s own. They are traced from the land, start as small streams, widen as they join, and every river reaches a lake or the sea. On limestone a river can sink into a swallow hole and flow on through a cave.',
+                'g.w.note': '<span class="text-purewhite font-bold">The new terrain needs a new world.</span> A world made with an older version keeps its own terrain, in new chunks too. Earthquakes, volcanoes, weather, gases and instruments work in it.',
                 'g.s2.title': 'Four Kinds,<br>Four Worlds',
                 'g.s2.body': 'The Himalaya has the thickest crust on Earth and not one volcano. Tibet is covered in hot springs anyway. The model knows the difference.',
                 'g.b1.name': 'Spreading rift',
@@ -676,46 +955,86 @@
                 'g.b4.body': 'Neither side rises or falls. One slides along the other and carries the landscape with it, so a stream bed crossing the fault is genuinely cut and offset. The San Andreas.',
                 'g.b4.under': 'Below: a narrow scar of shattered rock',
                 'g.s3.tag': '// EARTHQUAKES',
-                'g.s3.title': 'Two Minutes<br>Of Ground',
-                'g.s3.p1': 'A rupture follows the real curve of the fault. Its length comes from the standard surface-rupture scaling law, its magnitude from the Gutenberg-Richter distribution. The whole boundary moves at once, slowly, over a couple of minutes. Plates do not unzip from a point; they pull apart everywhere along the line together.',
-                'g.s3.p2': 'Afterwards the ground settles. Spikes fall, crests shed talus at their feet, and the forest reseats itself: a tree whose ground dropped a little comes down with it, roots and all. Where the slope actually failed, the scarp is left bare.',
+                'g.s3.title': 'Faults<br>That Break',
+                'g.s3.p1': 'Earthquakes come from the faults. Each stretch of fault builds up strain and breaks in its own time. The rupture follows the real curve of the fault; its length comes from the standard surface-rupture scaling law and its magnitude from the Gutenberg-Richter distribution.',
+                'g.s3.p2': 'You get P and S waves, aftershocks, liquefaction on wet sand, landslides and rockfall, felt as far as real quakes are. A quake can wake a sleeping volcano, open hot springs and change a geyser’s rhythm.',
+                'g.s3.p3': 'Damage depends on what a build is made of and what it stands on. Foundations, base isolation and bracing help. The config option <code class="font-mono text-purewhite">quakesBreakBuilds</code> controls it and is on by default.',
                 'g.s3.cap': 'Small quakes are common. The M9 is worth travelling for.',
+                'g.chart.y': 'How often',
                 'g.s4.title': 'Mountains<br>With Reasons',
                 'g.s4.body': 'In the real world you do not get to choose the shape of a volcano. Thick, sticky magma above a subduction zone piles into a steep layered cone. Runny magma from a hotspot spreads into a vast gentle shield, or blows its roof off and leaves a caldera. You can tell where you are standing by the mountain.',
+                'g.s4.v': 'There are four types (stratovolcano, shield, caldera and fissure), three sizes and three states: active, dormant and extinct. A volcano warns before it erupts, with quake swarms and swelling ground. Eruptions bring lava, volcanic bombs, pyroclastic flows, volcanic gas and ashfall that can bring down roofs. On rifts, fissure eruptions run hundreds of blocks long.',
+                'g.s4.hs': 'Geothermal basins have hot springs in four stages, mud pots, fumaroles and geysers that erupt on a cycle.',
                 'g.s4.h2': 'The colours are alive',
                 'g.s4.p2': 'Each band around a hot spring is a community of microorganisms that can only survive inside its own temperature range. The ring you are standing on tells you how hot the water was when it got there. It is a thermometer you can see.',
-                'g.s4.p3': 'Above roughly 73 °C nothing survives, which is why the lip of the pool is bare silica sinter. Sulfur crusts the acidic fumaroles instead, so the ground also tells you the chemistry.',
+                'g.s4.p3': 'Above roughly 73 °C nothing survives, which is why the lip of the pool is bare silica sinter. Sulfur crusts the acidic fumaroles instead, so the ground also tells you the chemistry.',
                 'g.s4.rampcap': 'Outward from the water',
                 'g.band1': 'Sinter',
                 'g.band2': 'Orange mat',
                 'g.band3': 'Yellow mat',
                 'g.band4': 'Brown mat',
                 'g.band5': 'Green mat',
+                'g.ww.title': 'Water<br>And Weather',
+                'g.ww.1': 'Soil gets wet in the rain and dries in the sun. The colour of the grass shows how wet the ground is.',
+                'g.ww.2': 'A well pump lowers the water table if you pump too much: springs dry up, clay plains sink and sinkholes open on limestone.',
+                'g.ww.3': 'Heavy rain on soaked ground floods rivers. Thin dams break. Sea water is salty.',
+                'g.ww.4': 'Rain is regional. Storms drift on the wind instead of falling everywhere at once, with showers, fronts, long wet spells and rain shadows behind ranges.',
+                'g.ww.5': 'With Serene Seasons, rain and river levels follow the seasons.',
+                'g.gp.title': 'Gases<br>And Power',
+                'g.gp.1': 'Nine gases: firedamp (methane) by coal seams, carbon dioxide in craters, hollows and limestone caves, natural gas and hydrogen sulfide over oil fields, plus hydrogen, carbon monoxide, sulfur dioxide and others.',
+                'g.gp.2': 'The kit: an electrolyser, tanks, pipes, a gas engine (FE), a gas heater (Tough As Nails) and gas-fired furnaces.',
+                'g.gp.3': 'A geothermal turbine makes FE from a well drilled into a hot spring or geyser.',
+                'g.gp.4': 'Create: a crankshaft on the gas engine gives mechanical power. Electrodynamics: 120 V.',
+                'g.in.title': 'Instruments',
+                'g.in.lead': 'Players read the world with instruments, not commands.',
+                'g.i1': 'Geologist’s hammer',
+                'g.i2': 'Fault compass',
+                'g.i3': 'Core drill',
+                'g.i4': 'Geothermal probe',
+                'g.i5': 'Geological map',
+                'g.i6': 'Seismograph network',
+                'g.i7': 'Weather station (3-day forecast)',
+                'g.i8': 'Volcano observatory',
+                'g.in.guide': 'A 52-page in-game Field Guide and 18 advancements.',
+                'g.alt.valley': 'A river valley between snowy peaks',
+                'g.alt.everest': 'Everest seen from a river far below',
+                'g.alt.rift': 'A rift valley at sunset',
+                'g.alt.village': 'A village after a strong earthquake',
+                'g.alt.strato': 'A stratovolcano erupting',
+                'g.alt.spring': 'A hot spring with microbial mats',
+                'g.alt.flame': 'A standing gas flame at night',
                 'g.s5.tag': '// GET IT',
-                'g.s5.title': 'Alpha<br>0.9.0',
-                'g.s5.compat': 'It reads your world instead of replacing it',
-                'g.s5.c1': 'No worldgen is overridden, no biome source is taken over, no noise settings are touched. It stacks on top of Terralith and Tectonic rather than fighting them, and if a terrain mod has already painted a Yellowstone, the model settles on it.',
-                'g.s5.c2': 'Player-placed blocks are never broken. Not by generation, not by an eruption, not by an earthquake. Safe to add to a world you have already built in.',
-                'g.tag.nodeps': 'No hard dependencies',
+                'g.s5.title': 'Version<br>0.11.0',
+                'g.s5.upd': 'Last updated for 0.11.0, October 2026.',
+                'g.s5.req': 'FT’s Geology 0.11.0 for Minecraft 1.20.1, Forge 47 or newer, Java 17. No required mods. A NeoForge 1.21.1 version is coming soon.',
+                'g.s5.lic': 'License: GNU GPL-3.0 from 0.11. Versions up to 0.10 were MIT.',
+                'g.tag.nodeps': 'No required mods',
+                'g.s5.compat': 'Compatibility',
+                'g.s5.c1': 'Terralith: the mod’s world stays the default and Terralith’s biomes grow on its terrain.',
+                'g.s5.c2': 'Tectonic, TerraBlender, Biomes O’ Plenty and BYG: the vanilla world stays the default. Pick FT’s Geology under World Type.',
+                'g.s5.c3': 'It also works with TerraFirmaCraft, Distant Horizons (far terrain drawn from the plate model), Create, Electrodynamics, Serene Seasons, Tough As Nails, Flowing Fluids and Oculus.',
+                'g.s5.addon': 'Addon: “FT’s Geology: Feel the Nature”, a separate mod. Among other things it plays recorded rain and wind.',
+                'g.s5.off.h': 'Off by default',
+                'g.s5.off1': '<code class="font-mono text-purewhite">soilWaterChangesGround</code>: droughts change the ground (grass dies back, soil soaks up poured water).',
+                'g.s5.off2': '<code class="font-mono text-purewhite">emergentEnabled</code>: player-built geysers (water over rock over lava becomes a live geyser that can blow up a base).',
+                'g.s5.bugs': 'Found a bug? <a href="https://github.com/Jelada-Studios/fts-geology/issues" target="_blank" rel="noopener noreferrer" class="text-purewhite underline decoration-tensionred decoration-2 underline-offset-4 hover:text-tensionred transition-colors">Open an issue on GitHub</a> with the mod version, your other mods and <code class="font-mono text-purewhite">logs/latest.log</code>. For terrain, add the seed and coordinates.',
+                'g.cmd.ops': 'Commands are for operators only. Players read the world with instruments. The full list is on the wiki’s <a href="https://github.com/Jelada-Studios/fts-geology/wiki" target="_blank" rel="noopener noreferrer" class="text-purewhite underline decoration-tensionred decoration-2 underline-offset-4 hover:text-tensionred transition-colors">Commands and Config</a> page.',
                 'g.cmd.read': 'Read the world',
+                'g.cmd.find': 'Find things',
                 'g.cmd.make': 'Make it happen',
-                'g.cmd.map': 'A filled map painted with the fault network',
-                'g.cmd.plate': 'Plate, crust, drift, boundary and stress for your column',
-                'g.cmd.column': 'The vertical section under you, bedrock to surface',
-                'g.cmd.find': 'Locate the nearest boundary of a given kind, or a hotspot',
-                'g.cmd.quake': 'Trigger an earthquake, or force a style anywhere to compare them',
-                'g.cmd.place': 'Build a geyser, a hot spring, or any of the four volcano types',
-                'g.cmd.deepgen': 'Regenerate the deep boundary geology around you',
-                'g.s5.alpha': 'This is an early release. Balance numbers will keep moving. Bug reports with a screenshot and the relevant lines from latest.log are enormously useful: the mod logs what it does, on purpose.',
+                'g.faq.title': 'Questions',
+                'g.q1': 'Do I need a new world?',
+                'g.a1': 'Yes, for the terrain. A world made with an older version keeps its own terrain, in new chunks too. Earthquakes, volcanoes, weather, gases and instruments work in it.',
+                'g.q2': 'Does it work with Terralith? With Biomes O’ Plenty or Tectonic?',
+                'g.a2': 'Yes. With Terralith, the mod’s world stays the default and Terralith’s biomes grow on its terrain. With Biomes O’ Plenty or Tectonic (and TerraBlender or BYG), the vanilla world stays the default. Pick FT’s Geology under World Type.',
+                'g.q3': 'Does it need any other mod?',
+                'g.a3': 'No. It has no required mods. It also works with TerraFirmaCraft, Distant Horizons, Create, Electrodynamics, Serene Seasons, Tough As Nails, Flowing Fluids and Oculus.',
+                'g.q4': 'Is there a NeoForge version?',
+                'g.a4': 'A NeoForge 1.21.1 version is coming soon.',
+                'g.q5': 'Do earthquakes break my builds?',
+                'g.a5': 'Yes. Damage depends on a build’s material and foundation, and foundations, base isolation and bracing help. The config option <code class="font-mono text-purewhite">quakesBreakBuilds</code> turns it off.',
                 'contact.tag': '// CONNECT',
                 'footer.copy': 'All rights reserved.',
-                'g.map.rift': 'Spreading',
-                'g.map.slide': 'Sliding',
-                'g.map.collide': 'Colliding',
-                'g.map.alt': 'Three tectonic plates: one pair pulls apart, one pair slides past each other, one pair collides.',
-                'g.chart.y': 'How often',
-                'g.cap1': 'A hot spring ringed by microbial colour bands, from above.',
-                'g.cap2': 'A stratovolcano with lava in its summit crater.',
                 'g.copy': 'Copy',
                 'g.copied': 'Copied'
             },
@@ -726,68 +1045,124 @@
                 'nav.contact': 'İletişim',
                 'g.back': 'Jelada Studios / Projeler',
                 'g.hero.claim': '<span lang="en">Minecraft</span>’ın <span class="hero-underline">en gerçekçi</span> jeoloji modu',
-                'g.hero.sub': 'Sürüklenen levhalar, olması gereken yer şekillerini üreten faylar, oluşumunu izleyebildiğiniz depremler ve üzerinde durdukları zemine göre biçimlenen volkanlar.',
+                'g.hero.sub': 'Plakalar sürüklenir ve dünyayı kurar: gerçek dağlar, faylardan gelen depremler, volkanlar, nehirler ve bölgesel yağmur.',
+                'g.hero.small': 'NeoForge 1.21.1 yakında',
                 'g.cta.download': 'İndir',
-                'g.cta.what': 'Neler oluşturuyor',
+                'g.cta.wiki': 'Wiki',
                 'g.cta.source': 'Kaynak kod',
+                'g.trailer': 'Fragmanı izle',
                 'g.s1.tag': '// MODEL',
                 'g.s1.title': 'Her Şey Tek<br>Bir Haritadan',
-                'g.s1.body': '<span class="text-purewhite font-bold">Dünyanız, her biri kendi yönüne sürüklenen levhalara bölünmüş durumda.</span> İki levha karşılaştığında ne olacağını, birbirlerine göre nasıl hareket ettikleri belirliyor; tıpkı gerçek Dünya’da olduğu gibi. Bu modda hiçbir şey süs değil: her volkan, her kaplıca, her deprem bu tek gerçeğin sonucu.',
+                'g.s1.body': '<span class="text-purewhite font-bold">Dünyanız, her biri kendi yönüne sürüklenen plakalara bölünmüş durumda.</span> İki plaka karşılaştığında ne olacağını, birbirlerine göre nasıl hareket ettikleri belirliyor; tıpkı gerçek Dünya’da olduğu gibi. Plaka kenarları dağ kuşaklarına, volkanik yaylara, riftlere ve okyanus sırtlarına dönüşür. Bu modda hiçbir şey süs değil: her volkan, her kaplıca, her deprem bu tek gerçeğin sonucu.',
+                'g.map.rift': 'Açılıyor',
+                'g.map.slide': 'Kayıyor',
+                'g.map.collide': 'Çarpışıyor',
+                'g.map.alt': 'Üç tektonik plaka: bir çift birbirinden uzaklaşıyor, bir çift yan yana kayıyor, bir çift çarpışıyor.',
+                'g.w.title': 'Kendine Ait<br>Bir Dünya',
+                'g.w1.h': 'Uzun bir dünya',
+                'g.w1.p': 'Yeni varsayılan dünya türü “FT’s Geology (Tall)” 960 blok yüksekliğinde (y -64 ile 896 arası) ve buna uygun biçimde yatayda da geniş: her iki yönde bir blok 10 m. Normal yükseklikteki “FT’s Geology” sürümü “Dünya Türü” altında.',
+                'g.w2.h': 'Gerçek dağlar',
+                'g.w2.p': 'Dağ kuşakları Alpler’in, Kafkaslar’ın, Himalayalar’ın, Karakurum’un ve Appalaşlar’ın gerçek yükseklik verisinden (SRTM) kurulur. Uzun dünyada bir Everest, bir K2 ve bir Matterhorn var. Orman, ağaç sınırı, alpin çayır, molozluk ve kar iklimi izler.',
+                'g.w3.h': 'Kaya ve cevher',
+                'g.w3.p': 'Plaka ortamına göre dağılan on iki kaya: traverten, riyolit, gabro, peridotit, serpantinit, şist, gnays, arduvaz, mermer, kuvarsit, şeyl ve çört. Cevher yatakları jeolojinin koyduğu yerde durur; petrol ve gaz sahaları da var.',
+                'g.w4.h': 'Nehirler',
+                'g.w4.p': 'Nehirler modun kendi nehirleri. Araziden izlenir, küçük bir dere olarak doğar, kollarıyla birleştikçe genişler ve hepsi bir göle ya da denize ulaşır. Kireçtaşında bir nehir düdene dalıp mağarada akmaya devam edebilir.',
+                'g.w.note': '<span class="text-purewhite font-bold">Modun arazisi yeni bir dünya ister.</span> Eski bir sürümle oluşturulmuş dünya kendi arazisini korur, yeni parçalarda (chunk) da. Depremler, volkanlar, hava, gazlar ve aletler o dünyada da çalışır.',
                 'g.s2.title': 'Dört Tip,<br>Dört Ayrı Dünya',
                 'g.s2.body': 'Himalayalar Dünya’nın en kalın kabuğuna sahip ve tek bir volkanı yok. Tibet yine de kaplıcalarla kaplı. Model bu farkı biliyor.',
                 'g.b1.name': 'Açılan rift',
                 'g.b1.body': 'Kabuk iki yana çekiliyor ve iki fay arasında kalan koca bir kara parçası çöküyor. Ekseninde bir yarık olan graben vadisi, yarık volkanizması, gayzerler. İzlanda.',
                 'g.b1.under': 'Altında: dikey bazalt dayk sürüsü',
                 'g.b2.name': 'Dalma-batma yayı',
-                'g.b2.body': 'Bir levha diğerinin altına dalıyor. Sınırın hemen dibinde derin bir hendek açılırken, üstte kalan levha iç kesimde yükseliyor; stratovolkanlar orada duruyor.',
-                'g.b2.under': 'Altında: dalan levha, magma odaları, granit kökler',
+                'g.b2.body': 'Bir plaka diğerinin altına dalıyor. Sınırın hemen dibinde derin bir hendek açılırken, üstte kalan plaka iç kesimde yükseliyor; stratovolkanlar orada duruyor.',
+                'g.b2.under': 'Altında: dalan plaka, magma odaları, granit kökler',
                 'g.b3.name': 'Kıtasal çarpışma',
-                'g.b3.body': 'İki levha da batacak kadar ağır değil, o yüzden kabuk buruşuyor: dik bir cephesi, arkasında geniş bir platosu ve eteğinde bir ön çukuru olan tek bir sıradağ. Kaplıcalar var, volkan yok.',
+                'g.b3.body': 'İki plaka da batacak kadar ağır değil, o yüzden kabuk buruşuyor: dik bir cephesi, arkasında geniş bir platosu ve eteğinde bir ön çukuru olan tek bir sıradağ. Kaplıcalar var, volkan yok.',
                 'g.b3.under': 'Altında: kıvrımlı mermer ve gnays kökü',
-                'g.b4.name': 'Doğrultu atımlı fay',
+                'g.b4.name': 'Yanal atımlı fay',
                 'g.b4.body': 'Hiçbir taraf yükselmiyor ya da çökmüyor. Biri diğerinin yanından kayıyor ve araziyi de beraberinde götürüyor; fay hattını kesen bir dere yatağı gerçekten kopup yana kayıyor. San Andreas.',
                 'g.b4.under': 'Altında: dar bir ezik kaya kuşağı',
                 'g.s3.tag': '// DEPREMLER',
-                'g.s3.title': 'Bütün Fay<br>Aynı Anda',
-                'g.s3.p1': 'Kırılma, fayın gerçek eğrisini izliyor. Uzunluğunu standart yüzey kırığı ölçekleme bağıntısı, büyüklüğünü Gutenberg-Richter dağılımı belirliyor. Sınırın tamamı aynı anda, yavaş yavaş, birkaç dakika boyunca hareket ediyor: levhalar tek bir noktadan fermuar gibi açılmaz, hat boyunca her yerde birlikte ayrılırlar.',
-                'g.s3.p2': 'Sonrasında zemin oturuyor. Tek başına kalan sivri bloklar düşüyor, taze fay sarplıkları eteğine moloz döküyor ve orman yeniden yerine oturuyor: zemini birkaç blok alçalan ağaç kökleriyle birlikte aşağı iniyor. Yamacın gerçekten göçtüğü yerde ise sarplık çıplak kalıyor.',
+                'g.s3.title': 'Kırılan<br>Faylar',
+                'g.s3.p1': 'Depremler faylardan gelir. Her fay parçası gerilim biriktirir ve kendi zamanında kırılır. Kırılma fayın gerçek eğrisini izler; uzunluğunu standart yüzey kırığı ölçekleme bağıntısı, büyüklüğünü Gutenberg-Richter dağılımı belirler.',
+                'g.s3.p2': 'P ve S dalgaları, artçılar, ıslak kumlu zeminde sıvılaşma, heyelan ve kaya düşmesi olur; gerçek depremler kadar uzaktan hissedilir. Bir deprem uykudaki bir volkanı uyandırabilir, kaplıca açabilir ve bir gayzerin ritmini değiştirebilir.',
+                'g.s3.p3': 'Hasar, yapının neyden yapıldığına ve neyin üzerinde durduğuna bağlıdır. Temel, taban izolasyonu ve çapraz destekler işe yarar. Bunu <code class="font-mono text-purewhite">quakesBreakBuilds</code> yapılandırma seçeneği belirler ve varsayılan olarak açıktır.',
                 'g.s3.cap': 'Küçük depremler sık görülür. M9 için yola çıkmaya değer.',
+                'g.chart.y': 'Ne sıklıkla',
                 'g.s4.title': 'Her Dağın<br>Bir Sebebi Var',
                 'g.s4.body': 'Gerçek dünyada bir volkanın şeklini siz seçmezsiniz. Dalma-batma bölgesinin üstündeki kıvamlı, yapışkan magma dik ve katmanlı bir koni yığar. Sıcak noktadan yükselen akışkan magma ise yayvan bir kalkana yayılır, ya da tavanını uçurup geriye bir kaldera bırakır. Nerede durduğunuzu dağın şeklinden anlarsınız.',
+                'g.s4.v': 'Dört tür (stratovolkan, kalkan, kaldera ve fissür), üç boyut ve üç durum var: aktif, uykuda ve sönmüş. Volkan patlamadan önce deprem sürüleri ve kabaran zeminle uyarır. Patlamalar lav, volkan bombaları, piroklastik akıntılar, volkanik gaz ve çatıları çökertebilen kül yağmuru getirir. Riftlerde fissür püskürmeleri yüzlerce blok boyunca uzanır.',
+                'g.s4.hs': 'Jeotermal havzalarda dört aşamalı kaplıcalar, çamur havuzları, fumaroller ve belli bir döngüyle püsküren gayzerler bulunur.',
                 'g.s4.h2': 'Bu renkler yaşıyor',
                 'g.s4.p2': 'Bir kaplıcanın çevresindeki her renk kuşağı, yalnızca kendi sıcaklık aralığında yaşayabilen bir mikroorganizma topluluğu. Üzerinde durduğunuz halka, suyun oraya varırken ne kadar sıcak olduğunu söylüyor: gözle görülebilen bir termometre.',
-                'g.s4.p3': 'Yaklaşık 73 °C’nin üstünde hiçbir şey yaşayamıyor; havuzun kenarının çıplak silis sinteri olmasının sebebi bu. Asidik fumarollerin çevresinde ise kükürt birikiyor, yani zemin size kimyayı da söylüyor.',
+                'g.s4.p3': 'Yaklaşık 73 °C’nin üstünde hiçbir şey yaşayamıyor; havuzun kenarının çıplak silis sinteri olmasının sebebi bu. Asidik fumarollerin çevresinde ise kükürt birikiyor, yani zemin size kimyayı da söylüyor.',
                 'g.s4.rampcap': 'Sudan dışa doğru',
                 'g.band1': 'Sinter',
                 'g.band2': 'Turuncu mat',
                 'g.band3': 'Sarı mat',
                 'g.band4': 'Kahverengi mat',
                 'g.band5': 'Yeşil mat',
+                'g.ww.title': 'Su ve<br>Hava',
+                'g.ww.1': 'Toprak yağmurla ıslanır, güneşle kurur. Çimin rengi zeminin ne kadar ıslak olduğunu gösterir.',
+                'g.ww.2': 'Kuyu pompasıyla çok su çekerseniz yeraltı su seviyesi düşer: pınarlar kurur, kil ovaları çöker, kireçtaşında obruklar açılır.',
+                'g.ww.3': 'Sırılsıklam zemine yağan sağanak nehirleri taşırır. İnce barajlar yıkılır. Deniz suyu tuzludur.',
+                'g.ww.4': 'Yağmur bölgeseldir. Fırtınalar her yere birden yağmak yerine rüzgârla sürüklenir; sağanaklar, cepheler, uzun yağışlı dönemler ve sıradağların arkasında yağmur gölgeleri olur.',
+                'g.ww.5': 'Serene Seasons ile yağmur ve nehir seviyeleri mevsimleri izler.',
+                'g.gp.title': 'Gazlar<br>ve Enerji',
+                'g.gp.1': 'Dokuz gaz: kömür damarlarının yanında grizu (metan), kraterlerde, çukurlarda ve kireçtaşı mağaralarında karbondioksit, petrol sahalarının üstünde doğal gaz ve hidrojen sülfür; ayrıca hidrojen, karbonmonoksit, kükürt dioksit ve diğerleri.',
+                'g.gp.2': 'Donanım: elektrolizör, tanklar, borular, gaz motoru (FE), gaz ısıtıcı (Tough As Nails) ve gazla çalışan fırınlar.',
+                'g.gp.3': 'Jeotermal türbin, bir kaplıcaya ya da gayzere açılan kuyudan FE üretir.',
+                'g.gp.4': 'Create: gaz motorundaki krank mili mekanik güç verir. Electrodynamics: 120 V.',
+                'g.in.title': 'Aletler',
+                'g.in.lead': 'Oyuncular dünyayı komutlarla değil aletlerle okur.',
+                'g.i1': 'Jeolog çekici',
+                'g.i2': 'Fay pusulası',
+                'g.i3': 'Karot sondajı',
+                'g.i4': 'Jeotermal prob',
+                'g.i5': 'Jeolojik harita',
+                'g.i6': 'Sismograf ağı',
+                'g.i7': 'Hava istasyonu (3 günlük tahmin)',
+                'g.i8': 'Volkan gözlemevi',
+                'g.in.guide': '52 sayfalık oyun içi Saha Rehberi ve 18 ilerleme.',
+                'g.alt.valley': 'Karlı zirveler arasında bir nehir vadisi',
+                'g.alt.everest': 'Çok aşağıdaki bir nehirden görünen Everest',
+                'g.alt.rift': 'Gün batımında bir rift vadisi',
+                'g.alt.village': 'Güçlü bir depremden sonra bir köy',
+                'g.alt.strato': 'Püskürmekte olan bir stratovolkan',
+                'g.alt.spring': 'Mikrobiyal matlı bir kaplıca',
+                'g.alt.flame': 'Geceleyin yanan sabit bir gaz alevi',
                 'g.s5.tag': '// İNDİR',
-                'g.s5.title': 'Alfa<br>0.9.0',
-                'g.s5.compat': 'Dünyanızı değiştirmek yerine okuyor',
-                'g.s5.c1': 'Hiçbir dünya üretimi geçersiz kılınmıyor, hiçbir biyom kaynağı devralınmıyor, gürültü ayarlarına dokunulmuyor. Terralith ve Tectonic ile çekişmek yerine üstlerine biniyor; bir arazi modu oraya zaten bir Yellowstone çizmişse model onun üzerine yerleşiyor.',
-                'g.s5.c2': 'Oyuncunun koyduğu bloklar asla kırılmıyor: ne dünya üretiminde, ne patlamada, ne depremde. Uzun süredir inşa ettiğiniz bir dünyaya sonradan eklemek güvenli.',
-                'g.tag.nodeps': 'Zorunlu bağımlılık yok',
+                'g.s5.title': 'Sürüm<br>0.11.0',
+                'g.s5.upd': '0.11.0 için güncellendi, Ekim 2026.',
+                'g.s5.req': 'FT’s Geology 0.11.0: Minecraft 1.20.1, Forge 47 ya da üstü, Java 17. Zorunlu mod yok. NeoForge 1.21.1 sürümü yakında geliyor.',
+                'g.s5.lic': 'Lisans: 0.11’den itibaren GNU GPL-3.0. 0.10’a kadar olan sürümler MIT idi.',
+                'g.tag.nodeps': 'Zorunlu mod yok',
+                'g.s5.compat': 'Uyumluluk',
+                'g.s5.c1': 'Terralith: modun dünyası varsayılan kalır, Terralith’in biyomları modun arazisinde büyür.',
+                'g.s5.c2': 'Tectonic, TerraBlender, Biomes O’ Plenty ve BYG: varsayılan dünya vanilla dünya olarak kalır. Dünya oluştururken “Dünya Türü”nden FT’s Geology’yi seçin.',
+                'g.s5.c3': 'TerraFirmaCraft, Distant Horizons (uzak arazi plaka modelinden çizilir), Create, Electrodynamics, Serene Seasons, Tough As Nails, Flowing Fluids ve Oculus ile de çalışır.',
+                'g.s5.addon': 'Eklenti: “FT’s Geology: Feel the Nature”, ayrı bir mod. Diğer şeylerin yanında kaydedilmiş yağmur ve rüzgâr sesi çalar.',
+                'g.s5.off.h': 'Varsayılan olarak kapalı',
+                'g.s5.off1': '<code class="font-mono text-purewhite">soilWaterChangesGround</code>: kuraklıklar zemini değiştirir (çimen kurur, toprak döktüğünüz suyu emer).',
+                'g.s5.off2': '<code class="font-mono text-purewhite">emergentEnabled</code>: oyuncunun kurduğu gayzerler (lavanın üstünde kaya, kayanın üstünde su varsa canlı bir gayzer olur ve bir üssü havaya uçurabilir).',
+                'g.s5.bugs': 'Hata mı buldunuz? <a href="https://github.com/Jelada-Studios/fts-geology/issues" target="_blank" rel="noopener noreferrer" class="text-purewhite underline decoration-tensionred decoration-2 underline-offset-4 hover:text-tensionred transition-colors">GitHub’da bir issue açın</a>: mod sürümünü, kurulu diğer modları ve <code class="font-mono text-purewhite">logs/latest.log</code> dosyasını ekleyin. Arazi sorunlarında seed ve koordinatları da ekleyin.',
+                'g.cmd.ops': 'Komutlar yalnızca operatörler içindir. Oyuncular dünyayı aletlerle okur. Tam liste wiki’deki <a href="https://github.com/Jelada-Studios/fts-geology/wiki" target="_blank" rel="noopener noreferrer" class="text-purewhite underline decoration-tensionred decoration-2 underline-offset-4 hover:text-tensionred transition-colors">Commands and Config</a> sayfasında.',
                 'g.cmd.read': 'Dünyayı oku',
+                'g.cmd.find': 'Bul',
                 'g.cmd.make': 'Harekete geçir',
-                'g.cmd.map': 'Fay ağının işlendiği, doldurulmuş bir harita',
-                'g.cmd.plate': 'Bulunduğunuz sütunun levhası, kabuğu, sürüklenmesi, sınırı ve gerilimi',
-                'g.cmd.column': 'Ayağınızın altındaki dikey kesit, ana kayadan yüzeye kadar',
-                'g.cmd.find': 'İstediğiniz tipteki en yakın sınırı ya da sıcak noktayı bulur',
-                'g.cmd.quake': 'Deprem tetikler; karşılaştırmak için istediğiniz tipi her yerde zorlayabilirsiniz',
-                'g.cmd.place': 'Gayzer, kaplıca ya da dört volkan tipinden birini kurar',
-                'g.cmd.deepgen': 'Çevrenizdeki derin sınır jeolojisini yeniden üretir',
-                'g.s5.alpha': 'Bu erken bir sürüm; denge sayıları değişmeye devam edecek. Ekran görüntüsü ve latest.log dosyasındaki ilgili satırlarla gönderdiğiniz hata bildirimleri çok işe yarıyor: mod ne yaptığını bilerek günlüğe yazıyor.',
+                'g.faq.title': 'Sık sorulanlar',
+                'g.q1': 'Yeni bir dünya gerekir mi?',
+                'g.a1': 'Arazi için evet. Eski bir sürümle oluşturulmuş dünya kendi arazisini korur, yeni parçalarda da. Depremler, volkanlar, hava, gazlar ve aletler o dünyada da çalışır.',
+                'g.q2': 'Terralith ile çalışır mı? Biomes O’ Plenty ya da Tectonic ile?',
+                'g.a2': 'Evet. Terralith ile modun dünyası varsayılan kalır ve Terralith’in biyomları modun arazisinde büyür. Biomes O’ Plenty ya da Tectonic (ve TerraBlender ya da BYG) kuruluysa varsayılan dünya vanilla kalır; “Dünya Türü”nden FT’s Geology’yi seçersiniz.',
+                'g.q3': 'Başka bir mod gerekir mi?',
+                'g.a3': 'Hayır. Zorunlu mod yok. TerraFirmaCraft, Distant Horizons, Create, Electrodynamics, Serene Seasons, Tough As Nails, Flowing Fluids ve Oculus ile de çalışır.',
+                'g.q4': 'NeoForge sürümü var mı?',
+                'g.a4': 'NeoForge 1.21.1 sürümü yakında geliyor.',
+                'g.q5': 'Depremler yapılarımı yıkar mı?',
+                'g.a5': 'Evet. Hasar, yapının malzemesine ve temeline bağlıdır; temel, taban izolasyonu ve çapraz destekler işe yarar. <code class="font-mono text-purewhite">quakesBreakBuilds</code> yapılandırma seçeneği bunu kapatır.',
                 'contact.tag': '// İLETİŞİM',
                 'footer.copy': 'Tüm hakları saklıdır.',
-                'g.map.rift': 'Açılıyor',
-                'g.map.slide': 'Kayıyor',
-                'g.map.collide': 'Çarpışıyor',
-                'g.map.alt': 'Üç tektonik levha: bir çift birbirinden uzaklaşıyor, bir çift yan yana kayıyor, bir çift çarpışıyor.',
-                'g.chart.y': 'Ne sıklıkla',
-                'g.cap1': 'Mikrobiyal renk kuşaklarıyla çevrili bir kaplıca, yukarıdan.',
-                'g.cap2': 'Zirve kraterinde lav olan bir stratovolkan.',
                 'g.copy': 'Kopyala',
                 'g.copied': 'Kopyalandı'
             }

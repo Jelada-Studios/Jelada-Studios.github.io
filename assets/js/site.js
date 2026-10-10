@@ -203,6 +203,8 @@
             const v = dict[el.getAttribute('data-i18n-html')];
             if (v != null) items.push({ el, apply: () => { el.innerHTML = v; if (el.hasAttribute('data-split')) splitWords(el); if (el.hasAttribute('data-chars')) splitChars(el); } });
         });
+        // Image descriptions change with the language (they are not text on screen, so no wipe)
+        $$('[data-i18n-alt]').forEach((el) => { const v = dict[el.getAttribute('data-i18n-alt')]; if (v != null) el.setAttribute('alt', v); });
         $$('.lang-btn').forEach((b) => b.classList.toggle('active', b.getAttribute('data-lang') === lang));
 
         if (anim) {
