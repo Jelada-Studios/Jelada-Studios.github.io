@@ -1,4 +1,4 @@
-/* FT's Geology page behaviour: the boundary tabs, the seismogram and the copy buttons.
+/* FT's Geology page behaviour: the boundary tabs, the seismogram, the trailer and the copy buttons.
    Loaded after site.js. Everything is optional; the page reads in full without it. */
 (function () {
     'use strict';
@@ -88,6 +88,29 @@
             d += (i ? 'L' : 'M') + (p * W).toFixed(1) + ' ' + y.toFixed(1);
         }
         line.setAttribute('d', d);
+    })();
+
+    /* ================= Trailer ================= */
+    // The poster is a plain link to YouTube. With JavaScript, pressing it swaps in the player right here
+    // (youtube-nocookie, so nothing is loaded or stored until then).
+    (function () {
+        const link = $('[data-trailer]');
+        if (!link) return;
+        link.addEventListener('click', (e) => {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // let "open in new tab" work
+            e.preventDefault();
+            const frame = link.closest('.fts-hero-frame');
+            const f = document.createElement('iframe');
+            f.className = 'trailer-frame';
+            f.src = 'https://www.youtube-nocookie.com/embed/' + link.getAttribute('data-trailer') + '?autoplay=1&rel=0';
+            f.title = link.textContent.trim();
+            f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            f.allowFullscreen = true;
+            f.referrerPolicy = 'strict-origin-when-cross-origin';
+            frame.appendChild(f);
+            frame.classList.add('is-playing');
+            f.focus();
+        });
     })();
 
     /* ================= Copy buttons ================= */
